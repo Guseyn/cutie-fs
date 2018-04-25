@@ -1,0 +1,28 @@
+{
+  "name": "@guseyn/cutie-fs",
+  "version": "1.0.0",
+  "description": "Cutie extension for fs module in Node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guseyn/cutie-fs.git"
+  },
+  "keywords": [
+    "cutie",
+    "fs",
+    "node",
+    "oop"
+  ],
+  "dependencies": {
+    "@guseyn/cutie": "1.2.5"
+  },
+  "author": "guseyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guseyn/cutie-fs/issues"
+  },
+  "homepage": "https://github.com/Guseyn/cutie-fs#readme"
+}
