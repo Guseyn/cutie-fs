@@ -8,7 +8,7 @@ class WatcherWithChangeEvent extends AsyncObject {
 
   /*
     ...args are (,[options][,listener])
-    listener is Event with definedBody(eventType, fileName)
+    listener is an Event with definedBody(eventType, fileName)
   */
   constructor(fileName, ...args) {
     super(fileName, ...args);
