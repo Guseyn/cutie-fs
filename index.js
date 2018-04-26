@@ -1,8 +1,8 @@
 module.exports = {
 
   BytesReadFromReadStream: require('./src/read-stream/BytesReadFromReadStream'),
-  ClosedReadStream: require('./src/read-stream/ClosedReadStream'),
   PathOfReadStream: require('./src/read-stream/PathOfReadStream'),
+  ReadStreamWithCloseEvent: require('./src/read-stream/ReadStreamWithCloseEvent'),
   ReadStreamWithOpenEvent: require('./src/read-stream/ReadStreamWithOpenEvent'),
 
   BirthTime: require('./src/stats/BirthTime'),
@@ -19,6 +19,11 @@ module.exports = {
 
   ClosedWatcher: require('./src/watcher/ClosedWatcher'),
   WatcherWithChangeEvent: require('./src/watcher/WatcherWithChangeEvent'),
-  WatcherWithErrorEvent: require('./src/watcher/WatcherWithErrorEvent')
+  WatcherWithErrorEvent: require('./src/watcher/WatcherWithErrorEvent'),
+
+  BytesWrittenToWriteStream: require('./src/write-stream/BytesWrittenToWriteStream'),
+  PathOfWriteStream: require('./src/write-stream/PathOfWriteStream'),
+  WriteStreamWithCloseEvent: require('./src/write-stream/WriteStreamWithCloseEvent'),
+  WriteStreamWithOpenEvent: require('./src/write-stream/WriteStreamWithOpenEvent')
 
 }
