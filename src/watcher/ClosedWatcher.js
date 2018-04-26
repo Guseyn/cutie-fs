@@ -2,7 +2,7 @@
 
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
 
-// Represented result is FSWatcher
+// Represented result is a FSWatcher
 class ClosedWatcher extends AsyncObject {
 
   constructor(watcher) {

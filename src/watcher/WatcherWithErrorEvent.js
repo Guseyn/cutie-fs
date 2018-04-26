@@ -6,7 +6,7 @@ const AsyncObject = require('@guseyn/cutie').AsyncObject;
 class WatcherWithErrorEvent extends AsyncObject {
 
   /*
-    event is Event with definedBody(error)
+    event is an Event with definedBody(error)
   */
   constructor(watcher, event) {
     super(watcher, event);
