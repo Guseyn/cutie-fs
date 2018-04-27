@@ -1,6 +1,26 @@
 module.exports = {
 
+  AccessibleFile: require('./src/file/AccessibleFile'),
+  AccessibleFileSync: require('./src/file/AccessibleFileSync'),
+  AppendedFile: require('./src/file/AppendedFile'),
+  AppendedFileSync: require('./src/file/AppendedFileSync'),
+  ClosedFile: require('./src/file/ClosedFile'),
+  ClosedFileSync: require('./src/file/ClosedFileSync'),
+  CopiedFile: require('./src/file/CopiedFile'),
+  CopiedFileSync: require('./src/file/CopiedFileSync'),
+  FileWithChangedOwnerByFD: require('./src/file/FileWithChangedOwnerByFD'),
+  FileWithChangedOwnerByFDSync: require('./src/file/FileWithChangedOwnerByFDSync'),
+  FileWithChangedOwnerByPath: require('./src/file/FileWithChangedOwnerByPath'),
+  FileWithChangedOwnerByPathSync: require('./src/file/FileWithChangedOwnerByPathSync'),
+  FileWithChangedPermissionsByFD: require('./src/file/FileWithChangedPermissionsByFD'),
+  FileWithChangedPermissionsByFDSync: require('./src/file/FileWithChangedPermissionsByFDSync'),
+  FileWithChangedPermissionsByPath: require('./src/file/FileWithChangedPermissionsByPath'),
+  FileWithChangedPermissionsByPathSync: require('./src/file/FileWithChangedPermissionsByPathSync'),
+  FileWithSyncedData: require('./src/file/FileWithSyncedData'),
+  FileWithSyncedDataSync: require('./src/file/FileWithSyncedDataSync'),
+
   BytesReadFromReadStream: require('./src/read-stream/BytesReadFromReadStream'),
+  CreatedReadStream: require('./src/read-stream/CreatedReadStream'),
   PathOfReadStream: require('./src/read-stream/PathOfReadStream'),
   ReadStreamWithCloseEvent: require('./src/read-stream/ReadStreamWithCloseEvent'),
   ReadStreamWithOpenEvent: require('./src/read-stream/ReadStreamWithOpenEvent'),
@@ -22,6 +42,7 @@ module.exports = {
   WatcherWithErrorEvent: require('./src/watcher/WatcherWithErrorEvent'),
 
   BytesWrittenToWriteStream: require('./src/write-stream/BytesWrittenToWriteStream'),
+  CreatedWriteStream: require('./src/write-stream/CreatedWriteStream'),
   PathOfWriteStream: require('./src/write-stream/PathOfWriteStream'),
   WriteStreamWithCloseEvent: require('./src/write-stream/WriteStreamWithCloseEvent'),
   WriteStreamWithOpenEvent: require('./src/write-stream/WriteStreamWithOpenEvent')
