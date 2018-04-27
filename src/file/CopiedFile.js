@@ -23,4 +23,4 @@ class CopiedFile extends AsyncObject {
 
 }
 
-module.exports = ClosedFile;
+module.exports = CopiedFile;

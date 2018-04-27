@@ -19,4 +19,4 @@ class FileWithChangedOwnerByFDSync extends AsyncObject {
 
 }
 
-module.exports = FileWithChangedOwnerByFD;
+module.exports = FileWithChangedOwnerByFDSync;

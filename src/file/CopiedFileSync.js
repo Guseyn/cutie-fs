@@ -19,4 +19,4 @@ class CopiedFileSync extends AsyncObject {
 
 }
 
-module.exports = ClosedFileSync;
+module.exports = CopiedFileSync;
