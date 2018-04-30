@@ -4,7 +4,7 @@ const AsyncObject = require('@guseyn/cutie').AsyncObject;
 const fs = require('fs');
 
 // Represented result is file[]
-class ReadFilesOfDirectory {
+class ReadFilesOfDirectory extends AsyncObject {
 
   constructor(path, options) {
     super(path, options || 'utf8');
