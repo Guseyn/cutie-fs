@@ -2,7 +2,7 @@
 
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
 
-// Represents buffer
+// Represented result is string
 class ReadBufferByFD extends AsyncObject {
 
   constructor(fd, buffer, offset, length, position) {
