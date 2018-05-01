@@ -17,7 +17,8 @@
     "oop"
   ],
   "dependencies": {
-    "@guseyn/cutie": "1.2.5"
+    "@guseyn/cutie": "1.2.8",
+    "@guseyn/cutie-assert": "1.0.3"
   },
   "author": "guseyn",
   "license": "MIT",

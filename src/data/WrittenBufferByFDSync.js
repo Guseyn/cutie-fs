@@ -1,6 +1,7 @@
 'use strict'
 
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
+const fs = require('fs');
 
 // Represented result is buffer
 class WrittenBufferByFDSync extends AsyncObject {

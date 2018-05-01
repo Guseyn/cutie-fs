@@ -1,6 +1,7 @@
 'use strict'
 
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
+const fs = require('fs');
 
 // Represented result is string
 class ReadBufferByFD extends AsyncObject {
