@@ -64,6 +64,7 @@ module.exports = {
   WrittenFileSync: require('./src/file/WrittenFileSync'),
 
   ReadFilesOfDirectory: require('./src/files/ReadFilesOfDirectory'),
+  ReadFilesOfDirectoryRecursively: require('./src/files/ReadFilesOfDirectoryRecursively'),
   ReadFilesOfDirectorySync: require('./src/files/ReadFilesOfDirectorySync'),
 
   BytesReadFromReadStream: require('./src/read-stream/BytesReadFromReadStream'),
