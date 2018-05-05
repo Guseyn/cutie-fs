@@ -20,6 +20,4 @@ class ReadFilesOfDirectory extends AsyncObject {
 
 }
 
-new ReadFilesOfDirectory('./src').call();
-
 module.exports = ReadFilesOfDirectory;
