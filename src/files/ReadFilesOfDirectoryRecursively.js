@@ -14,10 +14,6 @@ class ReadFilesOfDirectoryRecursively extends AsyncObject {
     return readFilesOfDirectoryRecursively;
   }
 
-  onResult(files) {
-    console.log(files.length);
-  }
-
 }
 
 module.exports = ReadFilesOfDirectoryRecursively;
