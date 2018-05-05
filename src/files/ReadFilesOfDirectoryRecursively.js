@@ -4,7 +4,7 @@ const AsyncObject = require('@guseyn/cutie').AsyncObject;
 const readFilesOfDirectoryRecursively = require('./../custom-calls/readFilesOfDirectoryRecursively');
 
 // Represented result is file[]
-class ReadFilesOfDirectory extends AsyncObject {
+class ReadFilesOfDirectoryRecursively extends AsyncObject {
 
   constructor(dir, options) {
     super(dir, options || 'utf8');
@@ -20,4 +20,4 @@ class ReadFilesOfDirectory extends AsyncObject {
 
 }
 
-module.exports = ReadFilesOfDirectory;
+module.exports = ReadFilesOfDirectoryRecursively;
