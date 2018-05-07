@@ -9,9 +9,9 @@ const {
   BufferLength
 } = require('@guseyn/cutie-buffer');
 const OpenedFile = require('./../../src/file/OpenedFile');
-const WrittenFile = require('./../../src/file/WrittenFile');
 const ReadBufferByFD = require('./../../src/data/ReadBufferByFD');
-const { AsyncObject, As, Cache } = require('@guseyn/cutie');
+const WrittenFile = require('./../../src/file/WrittenFile');
+const { As, Cache } = require('@guseyn/cutie');
 
 new Cache(
   new As(
@@ -26,8 +26,12 @@ new Cache(
     new AreBuffersEqual(
       new ReadBufferByFD(
         new WrittenFile(
-          new OpenedFile(file, 'w+'), new As('buffer')
-        ), new AllocatedBuffer(new As('len')), 0, new As('len'), 0
+          new OpenedFile(file, 'w+'),
+          new As('buffer')
+        ),
+        new AllocatedBuffer(
+          new As('len')
+        ), 0, new As('len'), 0
       ), new As('buffer')
     )
   )
