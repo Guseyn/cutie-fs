@@ -14,7 +14,7 @@ class ReadBufferByPathSync extends AsyncObject {
   }
 
   definedSyncCall() {
-    return fs.readFile;
+    return fs.readFileSync;
   }
 
 }

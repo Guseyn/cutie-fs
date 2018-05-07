@@ -3,7 +3,7 @@
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
 const fs = require('fs');
 
-// Represented result is file (as newPath)
+// Represented result is file (as linkstring)
 class LinkedFileSync extends AsyncObject {
 
   constructor(existingPath, newPath) {
@@ -12,8 +12,7 @@ class LinkedFileSync extends AsyncObject {
 
   definedSyncCall() {
     return (existingPath, newPath) => {
-      fs.linkSync(existingPath, newPath);
-      return newPath;
+      return fs.linkSync(existingPath, newPath);
     }
   }
 
