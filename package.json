@@ -17,10 +17,7 @@
     "oop"
   ],
   "dependencies": {
-    "@guseyn/cutie": "1.3.4",
-    "@guseyn/cutie-buffer": "1.0.4",
-    "@guseyn/cutie-assert": "1.0.7",
-    "test-executor": "1.0.4"
+    "test-executor": "1.0.5"
   },
   "author": "guseyn",
   "license": "MIT",
