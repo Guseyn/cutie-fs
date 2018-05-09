@@ -3,8 +3,8 @@
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
 const fs = require('fs');
 
-// Represented result is buffer or string
-class ReadLinkDataByPath extends AsyncObject {
+// Represented result is linkstring
+class ReadLinkByPath extends AsyncObject {
 
   constructor(path, options) {
     super(path, options || 'utf8');
@@ -13,7 +13,7 @@ class ReadLinkDataByPath extends AsyncObject {
   definedAsyncCall() {
     return fs.readlink;
   }
-
+  
 }
 
-module.exports = ReadLinkDataByPath;
+module.exports = ReadLinkByPath;
