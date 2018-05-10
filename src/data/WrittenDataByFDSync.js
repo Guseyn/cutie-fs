@@ -6,7 +6,7 @@ const fs = require('fs');
 // Represented result is a string
 class WrittenDataByFDSync extends AsyncObject {
 
-  // params is [, position[, encoding]]
+  // params are [, position[, encoding]]
   constructor(fd, string, ...params) {
     super(fd, string, ...params);
   }
