@@ -1,4 +1,4 @@
-const file = './test/data/test.txt';
+const file = './test/data/files/test-3.txt';
 const data = 'test buffer';
 const assert = require('assert');
 const { Assertion } = require('@guseyn/cutie-assert');
@@ -8,11 +8,12 @@ const {
   BufferFromString,
 } = require('@guseyn/cutie-buffer');
 const ReadDataByPathSync = require('./../../src/data/ReadDataByPathSync');
+const WrittenFile = require('./../../src/file/WrittenFile');
 
 new Assertion(
   new AreBuffersEqual(
     new ReadDataByPathSync(
-      file
+      new WrittenFile(file, data)
     ), new BufferFromString(data)
   )
 ).call();

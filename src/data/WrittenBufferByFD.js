@@ -6,7 +6,7 @@ const fs = require('fs');
 // Represented result is buffer
 class WrittenBufferByFD extends AsyncObject {
 
-  // params is [, offset[, length[, position]]]
+  // params are [, offset[, length[, position]]]
   constructor(fd, buffer, ...params) {
     super(fd, buffer, ...params);
   }

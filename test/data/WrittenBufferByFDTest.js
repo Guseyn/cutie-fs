@@ -1,17 +1,16 @@
-const file = './test/data/files/test-2.txt';
+const file = './test/data/files/test-8.txt';
 const data = 'test buffer';
 const assert = require('assert');
+const { Cache, As } = require('@guseyn/cutie');
 const { Assertion } = require('@guseyn/cutie-assert');
 const {
-  AllocatedBuffer,
   AreBuffersEqual,
   BufferFromString,
   BufferLength
 } = require('@guseyn/cutie-buffer');
-const OpenedFile = require('./../../src/file/OpenedFile');
-const ReadBufferByFD = require('./../../src/data/ReadBufferByFD');
 const WrittenFile = require('./../../src/file/WrittenFile');
-const { As, Cache } = require('@guseyn/cutie');
+const OpenedFile = require('./../../src/file/OpenedFile');
+const WrittenBufferByFD = require('./../../src/data/WrittenBufferByFD');
 
 new Cache(
   new As(
@@ -24,14 +23,11 @@ new Cache(
 ).forTree(
   new Assertion(
     new AreBuffersEqual(
-      new ReadBufferByFD(
-        new WrittenFile(
-          new OpenedFile(file, 'w+'),
-          new As('buffer')
+      new WrittenBufferByFD(
+        new OpenedFile(
+          new WrittenFile(file, ''), 'w+'
         ),
-        new AllocatedBuffer(
-          new As('len')
-        ), 0, new As('len'), 0
+        new As('buffer')
       ), new As('buffer')
     )
   )
