@@ -17,13 +17,12 @@ class AccessibleFile extends AsyncObject {
     }
   }
 
-  onResult() {
-    return this.file;
+  onErrorAndResult(error) {
+    return error.isNull ? this.file : error;
   }
 
-  onError(error) {
-    console.log(`no access!`);
-    return;
+  continueAfterFail() {
+    return true;
   }
 
 }
