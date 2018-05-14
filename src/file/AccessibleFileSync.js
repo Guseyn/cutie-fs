@@ -17,9 +17,12 @@ class AccessibleFileSync extends AsyncObject {
     }
   }
 
-  onError(error) {
-    console.log(`no access!`);
-    return;
+  onErrorAndResult(error, file) {
+    return error.isNull ? file : error;
+  }
+
+  continueAfterFail() {
+    return true;
   }
 
 }

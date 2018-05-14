@@ -1,5 +1,5 @@
-const file = './test/data/files/test-8.txt';
-const data = 'test buffer';
+'use strict'
+
 const assert = require('assert');
 const { Cache, As } = require('@guseyn/cutie');
 const { Assertion } = require('@guseyn/cutie-assert');
@@ -8,9 +8,14 @@ const {
   BufferFromString,
   BufferLength
 } = require('@guseyn/cutie-buffer');
-const WrittenFile = require('./../../src/file/WrittenFile');
-const OpenedFile = require('./../../src/file/OpenedFile');
-const WrittenBufferByFD = require('./../../src/data/WrittenBufferByFD');
+const {
+  WrittenFile,
+  OpenedFile,
+  WrittenBufferByFD
+} = require('./../../index');
+
+const file = './test/data/files/test-8.txt';
+const data = 'test buffer';
 
 new Cache(
   new As(
