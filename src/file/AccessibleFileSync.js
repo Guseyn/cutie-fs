@@ -12,7 +12,7 @@ class AccessibleFileSync extends AsyncObject {
 
   definedSyncCall() {
     return (path, mode) => {
-      fs.access(path, mode);
+      fs.accessSync(path, mode);
       return path;
     }
   }
