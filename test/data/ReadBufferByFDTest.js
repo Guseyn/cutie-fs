@@ -17,15 +17,13 @@ const {
 const file = './test/data/files/test-2.txt';
 const data = 'test buffer';
 
-new Cache(
-  new As(
-    new BufferLength(
-      new As(
-        new BufferFromString(data), 'buffer'
-      )
-    ), 'len'
-  )
-).forTree(
+new As(
+  new BufferLength(
+    new As(
+      new BufferFromString(data), 'buffer'
+    )
+  ), 'len'
+).after(
   new Assertion(
     new AreBuffersEqual(
       new ReadBufferByFD(

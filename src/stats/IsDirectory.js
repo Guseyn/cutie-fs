@@ -11,7 +11,7 @@ class IsDirectory extends AsyncObject {
 
   definedSyncCall() {
     return (stats) => {
-      return stats.IsDirectory();
+      return stats.isDirectory();
     }
   }
 
