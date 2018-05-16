@@ -16,7 +16,7 @@ class AppendedFileSync extends AsyncObject {
 
   definedSyncCall() {
     return (file, data, options) => {
-      fs.appendFile(file, data, options);
+      fs.appendFileSync(file, data, options);
       return file;
     }
   }

@@ -4,18 +4,18 @@ const {
   Assertion
 } = require('@guseyn/cutie-assert');
 const {
-  CreatedDirectory,
+  CreatedDirectorySync,
   DeletedDirectory,
   StatsByPath,
   IsDirectory
 } = require('./../../index');
 
-const dir = './test/file/dirs/dir2';
+const dir = './test/file/dirs/dir1';
 
 new Assertion(
   new IsDirectory(
     new StatsByPath(
-      new CreatedDirectory(dir)
+      new CreatedDirectorySync(dir)
     )
   )
 ).after(
