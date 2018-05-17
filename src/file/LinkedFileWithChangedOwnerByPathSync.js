@@ -12,7 +12,7 @@ class LinkedFileWithChangedOwnerByPathSync extends AsyncObject {
 
   definedSyncCall() {
     return (path, uid, gid) => {
-      fs.lchown(path, uid, gid);
+      fs.lchownSync(path, uid, gid);
       return path;
     }
   }

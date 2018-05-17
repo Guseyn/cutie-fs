@@ -12,7 +12,7 @@ class LinkedFileWithChangedPermissionsByPathSync extends AsyncObject {
 
   definedSyncCall() {
     return (path, mode) => {
-      fs.lchmod(path, mode);
+      fs.lchmodSync(path, mode);
       return path;
     }
   }

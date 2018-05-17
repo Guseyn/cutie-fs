@@ -12,7 +12,7 @@ class FileWithChangedPermissionsByFDSync extends AsyncObject {
 
   definedSyncCall() {
     return (fd, mode, callback) => {
-      fs.fchmod(fd, mode, callback);
+      fs.fchmodSync(fd, mode, callback);
       return fd;
     }
   }

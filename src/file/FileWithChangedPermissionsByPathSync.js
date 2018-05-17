@@ -12,7 +12,7 @@ class FileWithChangedPermissionsByPathSync extends AsyncObject {
 
   definedSyncCall() {
     return (path, mode) => {
-      fs.chmod(path, mode);
+      fs.chmodSync(path, mode);
       return path;
     }
   }

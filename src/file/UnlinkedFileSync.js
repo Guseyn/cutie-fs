@@ -10,7 +10,7 @@ class UnlinkedFileSync extends AsyncObject {
     super(path);
   }
 
-  definedAsyncCall() {
+  definedSyncCall() {
     return (path) => {
       fs.unlinkSync(path);
       return path;

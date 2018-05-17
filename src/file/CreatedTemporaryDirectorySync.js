@@ -11,7 +11,7 @@ class CreatedTemporaryDirectorySync extends AsyncObject {
   }
 
   definedSyncCall() {
-    return fs.mkdtemp;
+    return fs.mkdtempSync;
   }
 
 }

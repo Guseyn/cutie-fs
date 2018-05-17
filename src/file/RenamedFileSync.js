@@ -12,7 +12,7 @@ class RenamedFileSync extends AsyncObject {
 
   definedSyncCall() {
     return (oldPath, newPath) => {
-      fs.rename(oldPath, newPath);
+      fs.renameSync(oldPath, newPath);
       return newPath;
     }
   }
