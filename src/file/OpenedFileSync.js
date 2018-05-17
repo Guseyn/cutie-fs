@@ -11,7 +11,7 @@ class OpenedFileSync extends AsyncObject {
   }
 
   definedSyncCall() {
-    return fs.open;
+    return fs.openSync;
   }
 
 }

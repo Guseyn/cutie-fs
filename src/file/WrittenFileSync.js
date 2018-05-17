@@ -16,7 +16,7 @@ class WrittenFileSync extends AsyncObject {
 
   definedSyncCall() {
     return (file, data, options) => {
-      fs.writeFile(file, data, options);
+      fs.writeFileSync(file, data, options);
       return file;
     }
   }

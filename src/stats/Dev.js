@@ -2,8 +2,8 @@
 
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
 
-// Represented result is boolean
-class IsFIFO extends AsyncObject {
+// Represented result is number
+class Dev extends AsyncObject {
 
   constructor(stats) {
     super(stats);
@@ -11,10 +11,10 @@ class IsFIFO extends AsyncObject {
 
   definedSyncCall() {
     return (stats) => {
-      return stats.IsFIFO();
+      return stats.dev;
     }
   }
 
 }
 
-module.exports = IsFIFO;
+module.exports = Dev;

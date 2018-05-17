@@ -12,7 +12,7 @@ class FileWithChangedTimesByFDSync extends AsyncObject {
 
   definedSyncCall() {
     return (fd, atime, mtime) => {
-      fs.futimes(fd, atime, mtime);
+      fs.futimesSync(fd, atime, mtime);
       return fd;
     }
   }

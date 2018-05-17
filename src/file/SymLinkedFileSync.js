@@ -12,7 +12,7 @@ class SymLinkedFileSync extends AsyncObject {
 
   definedSyncCall() {
     return (target, path, type) => {
-      fs.symlink(target, path, type);
+      fs.symlinkSync(target, path, type);
       return path;
     }
   }

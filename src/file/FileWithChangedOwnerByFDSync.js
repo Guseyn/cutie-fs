@@ -12,7 +12,7 @@ class FileWithChangedOwnerByFDSync extends AsyncObject {
 
   definedSyncCall() {
     return (fd, uid, gid) => {
-      fs.fchown(fd, uid, gid);
+      fs.fchownSync(fd, uid, gid);
       return fd;
     }
   }
