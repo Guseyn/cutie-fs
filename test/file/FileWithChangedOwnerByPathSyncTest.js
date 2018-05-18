@@ -7,27 +7,22 @@ const {
   EqualAssertion
 } = require('@guseyn/cutie-assert');
 const {
-  FileWithChangedOwnerByFD,
-  OpenedFile,
-  StatsByFD,
+  FileWithChangedOwnerByPathSync,
+  StatsByPath,
   Uid,
   Gid
 } = require('./../../index');
 
-const file = './test/file/files/test-10.txt';
+const file = './test/file/files/test-11.txt';
 
 new As(
-  new StatsByFD(
-    new As(
-      new OpenedFile(
-        file, 'r+'
-      ), 'fd'
-    )
+  new StatsByPath(
+    file
   ), 'stats'
 ).after(
   new EqualAssertion(
-    new FileWithChangedOwnerByFD(
-      new As('fd'), new As(
+    new FileWithChangedOwnerByPathSync(
+      file, new As(
         new Uid(
           new As('stats')
         ), 'uid'
@@ -36,19 +31,19 @@ new As(
           new As('stats')
         ), 'gid'
       )
-    ), new As('fd')
+    ), file
   ).after(
     new EqualAssertion(
       new Uid(
-        new StatsByFD(
-          new As('fd')
+        new StatsByPath(
+          file
         )
       ), new As('uid')
     ).after(
       new EqualAssertion(
         new Gid(
-          new StatsByFD(
-            new As('fd')
+          new StatsByPath(
+            file
           )
         ), new As('gid')
       )
