@@ -1,8 +1,7 @@
 'use strict'
 
 const {
-  Cache,
-  As
+  as
 } = require('@guseyn/cutie');
 const { 
   ClosedFileSync,
@@ -14,12 +13,11 @@ const {
 
 const file = './test/file/files/test-5.txt';
 
-new As(
-  new OpenedFile(file, 'r+'), 'openedFile'
-).after(
-  new EqualAssertion(
-    new ClosedFileSync(
-      new As('openedFile')
-    ), new As('openedFile')
-  )
-).call();
+new OpenedFile(file, 'r+').as('openedFile')
+  .after(
+    new EqualAssertion(
+      new ClosedFileSync(
+        as('openedFile')
+      ), as('openedFile')
+    )
+  ).call();

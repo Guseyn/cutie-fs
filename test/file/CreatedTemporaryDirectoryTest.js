@@ -1,7 +1,7 @@
 'use strict'
 
 const {
-  As
+  as
 } = require('@guseyn/cutie');
 const {
   Assertion
@@ -18,13 +18,11 @@ const prefix = './test/file/dirs/';
 new Assertion(
   new IsDirectory(
     new StatsByPath(
-      new As(
-        new CreatedTemporaryDirectory(prefix), 'tmpdir'
-      )
+      new CreatedTemporaryDirectory(prefix).as('tmpdir')
     )
   )
 ).after(
   new DeletedDirectory(
-    new As('tmpdir')
+    as('tmpdir')
   )
 ).call();

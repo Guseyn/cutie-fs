@@ -1,9 +1,6 @@
 'use strict'
 
 const {
-  As
-} = require('@guseyn/cutie');
-const {
   EqualAssertion
 } = require('@guseyn/cutie-assert');
 const {
