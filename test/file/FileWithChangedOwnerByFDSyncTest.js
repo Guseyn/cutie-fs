@@ -1,7 +1,7 @@
 'use strict'
 
 const {
-  As
+  as
 } = require('@guseyn/cutie');
 const {
   EqualAssertion
@@ -16,42 +16,25 @@ const {
 
 const file = './test/file/files/test-9.txt';
 
-new As(
-  new StatsByFD(
-    new As(
-      new OpenedFile(
-        file, 'r+'
-      ), 'fd'
-    )
-  ), 'stats'
-).after(
-  new EqualAssertion(
-    new FileWithChangedOwnerByFDSync(
-      new As('fd'), new As(
-        new Uid(
-          new As('stats')
-        ), 'uid'
-      ), new As(
-        new Gid(
-          new As('stats')
-        ), 'gid'
-      )
-    ), new As('fd')
-  ).after(
+new StatsByFD(
+  new OpenedFile(
+    file, 'r+'
+  ).as('fd')
+).as('stats')
+  .after(
     new EqualAssertion(
-      new Uid(
-        new StatsByFD(
-          new As('fd')
-        )
-      ), new As('uid')
+      new FileWithChangedOwnerByFDSync(
+        as('fd'), 
+        new Uid(as('stats')).as('uid'),
+        new Gid(as('stats')).as('gid')
+      ), as('fd')
     ).after(
       new EqualAssertion(
-        new Gid(
-          new StatsByFD(
-            new As('fd')
-          )
-        ), new As('gid')
+        new Uid(new StatsByFD(as('fd'))), as('uid')
+      ).after(
+        new EqualAssertion(
+          new Gid(new StatsByFD(as('fd'))), as('gid')
+        )
       )
     )
-  )
-).call();
+  ).call();

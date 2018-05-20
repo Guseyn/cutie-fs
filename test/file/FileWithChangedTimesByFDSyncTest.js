@@ -1,7 +1,7 @@
 'use strict'
 
 const {
-  As
+  as
 } = require('@guseyn/cutie');
 const {
   EqualAssertion
@@ -21,58 +21,49 @@ const {
 
 const file = './test/file/files/test-17.txt';
 
-new As(
-  new StatsByFD(
-    new FileWithChangedTimesByFDSync(
-      new As(
-        new OpenedFile(file, 'r+'), 'fd'
-      ),
-      new As(
-        new Date(), 'atime'
-      ),
-      new As(
-        new Date(), 'mtime'
-      )
-    ), file
-  ), 'stats'
-).after(
-  new EqualAssertion(
-    new DateString(
-      new As(
-        new LastAccessedTime(
-          new As('stats')
-        ), 'new_atime'
-      )
-    ), new DateString(
-      new As('atime')
-    )
-  ).after(
+new StatsByFD(
+  new FileWithChangedTimesByFDSync(
+    new OpenedFile(file, 'r+').as('fd'),
+    new Date().as('atime'),
+    new Date().as('mtime')
+  )
+).as('stats')
+  .after(
     new EqualAssertion(
-      new TimeString(
-        new As('new_atime')
-      ), new TimeString(
-        new As('atime')
+      new DateString(
+        new LastAccessedTime(
+          as('stats')
+        ).as('new_atime') 
+      ),
+      new DateString(
+        as('atime')
       )
     ).after(
       new EqualAssertion(
-        new DateString(
-          new As(
-            new LastModifiedTime(
-              new As('stats')
-            ), 'new_mtime'
-          )
-        ), new DateString(
-          new As('mtime')
+        new TimeString(
+          as('new_atime')
+        ), new TimeString(
+          as('atime')
         )
       ).after(
         new EqualAssertion(
-          new TimeString(
-            new As('new_mtime')
-          ), new TimeString(
-            new As('mtime')
+          new DateString(
+            new LastModifiedTime(
+              as('stats')
+            ).as('new_mtime')
+          
+          ), new DateString(
+            as('mtime')
+          )
+        ).after(
+          new EqualAssertion(
+            new TimeString(
+              as('new_mtime')
+            ), new TimeString(
+              as('mtime')
+            )
           )
         )
       )
     )
-  )
-).call();
+  ).call();

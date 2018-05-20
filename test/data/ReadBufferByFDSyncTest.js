@@ -1,6 +1,6 @@
 'use strict'
 
-const { As, Cache } = require('@guseyn/cutie');
+const { as } = require('@guseyn/cutie');
 const { Assertion } = require('@guseyn/cutie-assert');
 const {
   AllocatedBuffer,
@@ -18,22 +18,19 @@ const {
 const file = './test/data/files/test-1.txt';
 const data = 'test buffer';
 
-new As(
-  new BufferLength(
-    new As(
-      new BufferFromString(data), 'buffer'
+new BufferLength(
+  new BufferFromString(data).as('buffer')
+).as('len')
+  .after(
+    new Assertion(
+      new ReadBufferByFDSync(
+        new WrittenFile(
+          new OpenedFile(file, 'w+'),
+          as('buffer')
+        ),
+        new AllocatedBuffer(
+          as('len')
+        ), 0, as('len'), 0
+      ), as('buffer')
     )
-  ), 'len'
-).after(
-  new Assertion(
-    new ReadBufferByFDSync(
-      new WrittenFile(
-        new OpenedFile(file, 'w+'),
-        new As('buffer')
-      ),
-      new AllocatedBuffer(
-        new As('len')
-      ), 0, new As('len'), 0
-    ), new As('buffer')
-  )
-).call();
+  ).call();
