@@ -8,7 +8,7 @@ const {
   DeletedDirectory,
 } = require('./../../index');
 
-const file = './test/file/dirs/dir3';
+const file = './test/file/dirs/dir4';
 
 new EqualAssertion(
   new DeletedDirectory(

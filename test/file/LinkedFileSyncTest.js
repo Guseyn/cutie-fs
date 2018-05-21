@@ -19,8 +19,8 @@ const {
   ReadDataByPath
 } = require('./../../index');
 
-const file = './test/file/files/test-22.txt';
-const newFile = './test/file/files/test-23.txt'
+const file = './test/file/files/test-23.txt';
+const newFile = './test/file/files/linked-test-23.txt'
 
 new Assertion(
   new IsFile(
