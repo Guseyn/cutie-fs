@@ -20,7 +20,7 @@ const {
 } = require('./../../index');
 
 const file = './test/file/files/test-24.txt';
-const newFile = './test/file/files/test-25.txt'
+const newFile = './test/file/files/linked-test-24.txt'
 
 new Assertion(
   new IsFile(

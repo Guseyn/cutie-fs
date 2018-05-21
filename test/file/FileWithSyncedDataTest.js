@@ -9,7 +9,7 @@ const {
   FileWithSyncedData
 } = require('./../../index');
 
-const file = './test/file/files/test-21.txt';
+const file = './test/file/files/test-22.txt';
 
 new FileWithSyncedData(
   new OpenedFile(file, 'r+').as('fd')

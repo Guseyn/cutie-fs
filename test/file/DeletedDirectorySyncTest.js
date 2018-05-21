@@ -8,7 +8,7 @@ const {
   DeletedDirectorySync,
 } = require('./../../index');
 
-const file = './test/file/dirs/dir2';
+const file = './test/file/dirs/dir3';
 
 new EqualAssertion(
   new DeletedDirectorySync(
