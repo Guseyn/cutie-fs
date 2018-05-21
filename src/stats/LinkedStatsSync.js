@@ -11,7 +11,7 @@ class LinkedStatsSync extends AsyncObject {
   }
 
   definedSyncCall() {
-    return fs.lstat;
+    return fs.lstatSync;
   }
 
 }
