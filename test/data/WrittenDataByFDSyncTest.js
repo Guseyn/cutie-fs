@@ -1,10 +1,12 @@
 'use strict'
 
+const { as } = require('@guseyn/cutie');
 const { EqualAssertion } = require('@guseyn/cutie-assert');
 const {
   WrittenFile,
   OpenedFile,
-  WrittenDataByFDSync
+  WrittenDataByFDSync,
+  ClosedFile
 } = require('./../../index');
 
 const file = './test/data/files/test-9.txt';
@@ -14,6 +16,8 @@ new EqualAssertion(
   new WrittenDataByFDSync(
     new OpenedFile(
       new WrittenFile(file, ''), 'w+'
-    ), data
+    ).as('fd'), data
   ), data
+).after(
+  new ClosedFile(as('fd'))
 ).call();

@@ -16,7 +16,8 @@ const {
   FileWithChangedTimesByFD,
   StatsByFD,
   LastAccessedTime,
-  LastModifiedTime
+  LastModifiedTime,
+  ClosedFile
 } = require('./../../index');
 
 const file = './test/file/files/test-18.txt';
@@ -62,6 +63,8 @@ new StatsByFD(
             ), new TimeString(
               as('mtime')
             )
+          ).after(
+            new ClosedFile(as('fd'))
           )
         )
       )

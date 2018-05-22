@@ -12,7 +12,8 @@ const {
   OpenedFile,
   ReadBufferByFDSync,
   WrittenFile,
-  UnlinkedFile
+  UnlinkedFile,
+  ClosedFile
 } = require('./../../index');
 
 const file = './test/data/files/test-1.txt';
@@ -25,12 +26,14 @@ new BufferLength(
     new Assertion(
       new ReadBufferByFDSync(
         new WrittenFile(
-          new OpenedFile(file, 'w+'),
+          new OpenedFile(file, 'w+').as('fd'),
           as('buffer')
         ),
         new AllocatedBuffer(
           as('len')
         ), 0, as('len'), 0
       ), as('buffer')
+    ).after(
+      new ClosedFile(as('fd'))
     )
   ).call();

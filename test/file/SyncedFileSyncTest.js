@@ -5,18 +5,22 @@ const {
   Assertion
 } = require('@guseyn/cutie-assert');
 const {
-  IsNumber
-} = require('@guseyn/cutie-is');
-const {
-  OpenedFileSync,
+  SyncedFileSync,
+  OpenedFile,
+  StatsByFD,
+  IsFile,
   ClosedFile
 } = require('./../../index');
 
-const file = './test/file/files/test-29.txt';
+const file = './test/file/files/test-36.txt';
 
 new Assertion(
-  new IsNumber(
-    new OpenedFileSync(file, 'r+').as('fd')
+  new IsFile(
+    new StatsByFD(
+      new SyncedFileSync(
+        new OpenedFile(file, 'r+').as('fd')
+      )
+    )
   )
 ).after(
   new ClosedFile(as('fd'))
