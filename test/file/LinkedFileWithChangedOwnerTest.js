@@ -7,7 +7,7 @@ const {
   EqualAssertion
 } = require('@guseyn/cutie-assert');
 const {
-  SymLinkedFile,
+  SymbolicLinkedFile,
   LinkedFileWithChangedOwnerSync,
   UnlinkedFile,
   LinkedStats,
@@ -19,7 +19,7 @@ const file = './test/file/files/test-26.txt';
 const newFile = './test/file/files/linked-test-26.txt';
 
 new LinkedStats(
-  new SymLinkedFile(file, newFile)
+  new SymbolicLinkedFile(file, newFile)
 ).as('stats')
   .after(
     new EqualAssertion(

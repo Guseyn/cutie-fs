@@ -12,7 +12,7 @@ class SyncedFileSync extends AsyncObject {
 
   definedSyncCall() {
     return (fd) => {
-      fs.fsyncSync(fd, callback);
+      fs.fsyncSync(fd);
       return fd;
     }
   }

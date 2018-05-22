@@ -4,7 +4,7 @@
 const { EqualAssertion } = require('@guseyn/cutie-assert');
 const {
   ReadLinkByPathSync,
-  SymLinkedFile,
+  SymbolicLinkedFile,
   LinkedFile,
   UnlinkedFile,
   WrittenFile
@@ -16,7 +16,7 @@ const data = 'test buffer';
 
 new EqualAssertion(
   new ReadLinkByPathSync(
-    new SymLinkedFile(
+    new SymbolicLinkedFile(
       new WrittenFile(file, data),
       linkedFile
     ) 

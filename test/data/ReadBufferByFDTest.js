@@ -11,7 +11,8 @@ const {
 const {
   OpenedFile,
   ReadBufferByFD,
-  WrittenFile
+  WrittenFile,
+  ClosedFile
 } = require('./../../index');
 
 const file = './test/data/files/test-2.txt';
@@ -25,7 +26,7 @@ new BufferLength(
       new AreBuffersEqual(
         new ReadBufferByFD(
           new WrittenFile(
-            new OpenedFile(file, 'w+'),
+            new OpenedFile(file, 'w+').as('fd'),
             as('buffer')
           ),
           new AllocatedBuffer(
@@ -33,5 +34,7 @@ new BufferLength(
           ), 0, as('len'), 0
         ), as('buffer')
       )
+    ).after(
+      new ClosedFile(as('fd'))
     )
   ).call();

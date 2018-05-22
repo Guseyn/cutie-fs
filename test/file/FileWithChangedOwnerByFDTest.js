@@ -11,7 +11,8 @@ const {
   OpenedFile,
   StatsByFD,
   Uid,
-  Gid
+  Gid,
+  ClosedFile
 } = require('./../../index');
 
 const file = './test/file/files/test-10.txt';
@@ -34,6 +35,8 @@ new StatsByFD(
       ).after(
         new EqualAssertion(
           new Gid(new StatsByFD(as('fd'))), as('gid')
+        ).after(
+          new ClosedFile(as('fd'))
         )
       )
     )

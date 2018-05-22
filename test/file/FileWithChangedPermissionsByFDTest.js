@@ -10,7 +10,8 @@ const {
   OpenedFile,
   FileWithChangedPermissionsByFD,
   StatsByFD,
-  Mode
+  Mode,
+  ClosedFile
 } = require('./../../index');
 
 const file = './test/file/files/test-14.txt';
@@ -26,5 +27,7 @@ new EqualAssertion(
 ).after(
   new FileWithChangedPermissionsByFD(
     as('fd'), 0o777
+  ).after(
+    new ClosedFile(as('fd'))
   )
 ).call();

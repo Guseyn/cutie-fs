@@ -5,7 +5,7 @@ const {
 } = require('@guseyn/cutie-assert');
 const {
   OpenedFile,
-  SymLinkedFile,
+  SymbolicLinkedFile,
   LinkedFileWithChangedPermissions,
   LinkedStats,
   StatsByPath,
@@ -20,7 +20,7 @@ new EqualAssertion(
   new Mode(
     new LinkedStats(
       new LinkedFileWithChangedPermissions(
-        new SymLinkedFile(
+        new SymbolicLinkedFile(
           file, newFile
         ), 0o400
       )

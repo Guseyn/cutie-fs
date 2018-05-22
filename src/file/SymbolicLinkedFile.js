@@ -4,7 +4,7 @@ const AsyncObject = require('@guseyn/cutie').AsyncObject;
 const fs = require('fs');
 
 // Represented result is file (as path)
-class SymLinkedFile extends AsyncObject {
+class SymbolicLinkedFile extends AsyncObject {
 
   constructor(target, path, type) {
     super(target, path, type || 'file');
@@ -23,4 +23,4 @@ class SymLinkedFile extends AsyncObject {
 
 }
 
-module.exports = SymLinkedFile;
+module.exports = SymbolicLinkedFile;

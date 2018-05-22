@@ -11,7 +11,8 @@ const {
 const {
   WrittenFile,
   OpenedFile,
-  WrittenBufferByFD
+  WrittenBufferByFD,
+  ClosedFile
 } = require('./../../index');
 
 const file = './test/data/files/test-8.txt';
@@ -26,9 +27,11 @@ new BufferLength(
         new WrittenBufferByFD(
           new OpenedFile(
             new WrittenFile(file, ''), 'w+'
-          ),
+          ).as('fd'),
           as('buffer')
         ), as('buffer')
       )
+    ).after(
+      new ClosedFile(as('fd'))
     )
   ).call();
