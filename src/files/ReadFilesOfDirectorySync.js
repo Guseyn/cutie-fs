@@ -11,7 +11,7 @@ class ReadFilesOfDirectorySync extends AsyncObject {
   }
 
   definedSyncCall() {
-    return fs.readdir;
+    return fs.readdirSync;
   }
 
 }
