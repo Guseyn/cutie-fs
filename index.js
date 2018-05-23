@@ -109,7 +109,6 @@ module.exports = {
   Uid: require('./src/stats/Uid'),
 
   ClosedWatcher: require('./src/watcher/ClosedWatcher'),
-  WatcherWithChangeEvent: require('./src/watcher/WatcherWithChangeEvent'),
   WatcherWithCurrentAndPreviousStatsListener: require('./src/watcher/WatcherWithCurrentAndPreviousStatsListener'),
   WatcherWithErrorEvent: require('./src/watcher/WatcherWithErrorEvent'),
   WatcherWithEventTypeAndFilenameListener: require('./src/watcher/WatcherWithEventTypeAndFilenameListener'),

@@ -6,14 +6,14 @@ const fs = require('fs');
 // Represented result is file (as fileName)
 class UnwatchedFile extends AsyncObject {
 
-  constructor(fileName) {
-    super(fileName);
+  constructor(fileName, listener) {
+    super(fileName, listener);
   }
 
-  definedAsyncCall() {
-    return (fileName, callback) => {
+  definedSyncCall() {
+    return (fileName, listener) => {
       this.file = fileName;
-      fs.unwatch(path, callback);
+      fs.unwatchFile(fileName, listener);
     }
   }
 

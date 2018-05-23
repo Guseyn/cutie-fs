@@ -14,7 +14,7 @@ class WatcherWithEventTypeAndFilenameListener extends AsyncObject {
       persistent: true,
       recursive: false,
       encoding: 'utf8'
-    }, listener);
+    }, listener || undefined);
   }
 
   definedSyncCall() {
