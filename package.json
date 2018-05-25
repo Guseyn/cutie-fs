@@ -23,7 +23,7 @@
     "@guseyn/cutie-error": "1.0.2",
     "@guseyn/cutie-event": "1.0.5",
     "@guseyn/cutie-date": "1.0.3",
-    "@guseyn/cutie-is": "1.0.0",
+    "@guseyn/cutie-is": "1.0.1",
     "@guseyn/cutie-stream": "1.0.4",
     "test-executor": "1.0.8"
   },

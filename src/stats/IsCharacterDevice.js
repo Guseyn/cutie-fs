@@ -11,7 +11,7 @@ class IsCharacterDevice extends AsyncObject {
 
   definedSyncCall() {
     return (stats) => {
-      return stats.IsCharacterDevice();
+      return stats.isCharacterDevice();
     }
   }
 
