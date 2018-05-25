@@ -1,6 +1,7 @@
 'use strict'
 
 const AsyncObject = require('@guseyn/cutie').AsyncObject;
+const fs = require('fs');
 
 class RealPath extends AsyncObject {
 
@@ -9,7 +10,7 @@ class RealPath extends AsyncObject {
   }
 
   definedAsyncCall() {
-    return fs.realPath;
+    return fs.realpath;
   }
 
 }

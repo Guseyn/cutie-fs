@@ -11,7 +11,7 @@ class StatsByFDSync extends AsyncObject {
   }
 
   definedSyncCall() {
-    return fs.fstat;
+    return fs.fstatSync;
   }
 
 }

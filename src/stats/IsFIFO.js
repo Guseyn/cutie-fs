@@ -11,7 +11,7 @@ class IsFIFO extends AsyncObject {
 
   definedSyncCall() {
     return (stats) => {
-      return stats.IsFIFO();
+      return stats.isFIFO();
     }
   }
 

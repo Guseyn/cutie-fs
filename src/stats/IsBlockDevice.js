@@ -11,7 +11,7 @@ class IsBlockDevice extends AsyncObject {
 
   definedSyncCall() {
     return (stats) => {
-      return stats.IsBlockDevice();
+      return stats.isBlockDevice();
     }
   }
 
