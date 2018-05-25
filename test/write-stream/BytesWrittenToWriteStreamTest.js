@@ -13,27 +13,30 @@ const {
   BufferLength
 } = require('@guseyn/cutie-buffer');
 const {
-  CreatedReadStream,
-  BytesReadFromReadStream
+  CreatedWriteStream,
+  BytesWrittenToWriteStream
 } = require('./../../index');
 const {
-  ReadDataFromReadable
+  WrittenWritable,
+  EndWritable
 } = require('@guseyn/cutie-stream');
 
-const file = './test/read-stream/files/test-1.txt';
+const file = './test/write-stream/files/test-1.txt';
 const data = 'test buffer';
 
 new BufferLength(
   new BufferFromString(data)
 ).as('len').after(
-  new ReadDataFromReadable(
-    new CreatedReadStream(
-      file
-    ).as('rs')
+  new EndWritable(
+    new WrittenWritable(
+      new CreatedWriteStream(
+        file
+      ).as('ws'), data
+    )
   ).after(
     new EqualAssertion(
-      new BytesReadFromReadStream(
-        as('rs')
+      new BytesWrittenToWriteStream(
+        as('ws')
       ), as('len')
     ) 
   )
