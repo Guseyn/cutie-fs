@@ -10,12 +10,11 @@ const {
   ListenerCount
 } = require('@guseyn/cutie-event');
 const {
-  UnwatchedFile,
-  WatcherWithEventTypeAndFilenameListener,
-  ClosedWatcher
+  WatcherWithCurrentAndPreviousStatsListener,
+  UnwatchedFile
 } = require('./../../index');
 
-const file = './test/file/files/test-44.txt';
+const file = './test/watcher/files/test-2.txt';
 
 class WatchListener extends Event {
 
@@ -23,25 +22,16 @@ class WatchListener extends Event {
     super();
   }
 
-  definedBody(eventType, fileName) {}
+  definedBody(current, previous) {}
 
 }
 
 new EqualAssertion(
   new ListenerCount(
-    new WatcherWithEventTypeAndFilenameListener(
+    new WatcherWithCurrentAndPreviousStatsListener(
       file,  new WatchListener()
     ).as('watcher'), 'change'
   ), 1
 ).after(
   new UnwatchedFile(file)
-    .after(
-      new EqualAssertion(
-        new ListenerCount(
-          as('watcher')
-        ), 0
-      ).after(
-        new ClosedWatcher(as('watcher'))
-      )
-    )
 ).call();
