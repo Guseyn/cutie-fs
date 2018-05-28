@@ -18,7 +18,7 @@ const {
 } = require('./../../index');
 const {
   WrittenWritable,
-  EndWritable
+  EndedWritable
 } = require('@guseyn/cutie-stream');
 
 const file = './test/write-stream/files/test-1.txt';
@@ -27,7 +27,7 @@ const data = 'test buffer';
 new BufferLength(
   new BufferFromString(data)
 ).as('len').after(
-  new EndWritable(
+  new EndedWritable(
     new WrittenWritable(
       new CreatedWriteStream(
         file
