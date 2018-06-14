@@ -1,6 +1,6 @@
 {
   "name": "@guseyn/cutie-fs",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Cutie extension for fs module in Node.",
   "main": "index.js",
   "scripts": {
