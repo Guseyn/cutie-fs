@@ -99,8 +99,63 @@ const {
 |  BytesReadFromReadStream | `readStream.bytesRead` | readStream | the number of bytes read so far |
 | CreatedReadStream | `fs.createReadStream` | path, options({flags: 'r', encoding: null, fd: null, mode: 0o666, autoClose: true, highWaterMark: 64 * 1024} | ReadStream |
 | PathOfReadStream | `readStream.path` | readStream | the path to the file the stream is reading |
-| ReadStreamWithCloseEvent | `readStream.on('close', event)` | readStream, event(an Event with definedBody()) | readStream |
-| ReadStreamWithOpenEvent | `readStream.on('open', event)` | readStream, event(an Event with definedBody(fd)) | readStream |
+| ReadStreamWithCloseEvent | `readStream.on('close', event)` | readStream, event(Event with definedBody()) | readStream |
+| ReadStreamWithOpenEvent | `readStream.on('open', event)` | readStream, event(Event with definedBody(fd)) | readStream |
+
+## stats
+
+| Async Object  | Async/sync call | Parameters | Representation result |
+| ------------- | ----------------| ---------- | --------------------- |
+| BirthTime | `stats.birthtime` | stats | time |
+| BirthTimeInMs | `stats.birthtimeMs` | stats | number |
+| BlkSize | `stats.blksize` | stats | number |
+| Blocks | `stats.blocks` | stats | number |
+| Dev | `stats.dev` | stats | number |
+| Gid | `stats.gid` | stats | number |
+| Ino | `stats.ino` | stats | number |
+| IsBlockDevice | `stats.isBlockDevice` | stats | boolean |
+| IsCharacterDevice | `stats.isCharacterDevice` | stats | boolean |
+| IsDirectory | `stats.isDirectory` | stats | boolean |
+| IsFIFO | `stats.isFIFO` | stats | boolean |
+| IsFile | `stats.isFile` | stats | boolean |
+| IsSocket | `stats.isSocket` | stats | boolean |
+| IsSymbolicLink | `stats.isSymbolicLink` | stats | boolean |
+| LastAccessedTime | `stats.atime` | stats | time |
+| LastAccessedTimeInMs | `stats.atimeMs` | stats | number |
+| LastChangedTime | `stats.ctime` | stats | time |
+| LastChangedTimeInMs | `stats.ctimeMs` | stats | number |
+| LastModifiedTime | `stats.mtime` | stats | time |
+| LinkedStats | `fs.lstat` | path | stats |
+| LinkedStatsSync | `fs.lstatSync` | path | stats |
+| Mode | `stats.mode` | stats | number |
+| Nlink | `stats.nlink` | stats | number |
+| RDev | `stats.rdev` | stats | rdev |
+| RealPath | `stats.realpath` | path, options('utf8') | path |
+| RealPathSync | `stats.realpathSync` | path, options('utf8') | path |
+| Size | `stats.size` | stats | number |
+| StatsByFD | `fs.fstat` | fd | stats |
+| StatsByFDSync | `fs.fstatSync` | fd | stats |
+| StatsByPath | `fs.stat` | path | stats |
+| StatsByPathSync | `fs.statSync` | path | stats |
+
+## watcher
+
+| Async Object  | Async/sync call | Parameters | Representation result |
+| ------------- | ----------------| ---------- | --------------------- |
+| ClosedWatcher | `watcher.close` | watcher | FSWatcher |
+| WatcherWithCurrentAndPreviousStatsListener | `fs.watchFile` | filename, options({persistent: true, interval: 5007}), listener(Event with definedBody(current, previous)) | FSWatcher |
+| WatcherWithErrorEvent | `watcher.on('error', event)` | watcher, event(definedBody(error)) | FSWatcher |
+| WatcherWithEventTypeAndFilenameListener | `fs.watch` | filename, options({persistent: true, recursive: false, encoding: 'utf8'}), listener(Event with definedBody(eventType, filename)) | FSWatcher |
+
+## write-stream
+
+| Async Object  | Async/sync call | Parameters | Representation result |
+| ------------- | ----------------| ---------- | --------------------- |
+| BytesWrittenToWriteStream | `writeStream.bytesWritten` | writeStream | the number of bytes written so far |
+| CreatedWriteStream | `fs.createWriteStream` | path, options ({flags: 'w', encoding: 'utf8', fd: null, mode: 0o666, autoClose: true}) | WriteStream |
+| PathOfWriteStream | `writeStream.path` | writeStream | the path to the file the stream is writing |
+| WriteStreamWithCloseEvent | `writeStream.on('close', event)` | writeStream, event(Event with definedBody()) | WriteStream |
+| WriteStreamWithOpenEvent | `writeStream.on('open', event)` | writeStream, event(Event with definedBody(fd)) | WriteStream |
 
 [npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-fs.svg
 [npm-url]: https://npmjs.org/package/@guseyn/cutie-fs
