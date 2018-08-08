@@ -75,6 +75,9 @@ const {
 | UnlinkedFile | `fs.unlink` | path | file (as path) |
 | UnlinkedFileSync | `fs.unlinkSync` | path | file (as path) |
 | UnwatchedFile | `fs.unwatchFile` | fileName, listener | file (as fileName) |
+| WrittenFile | `fs.writeFile` | file, data, options({encoding: 'utf8', mode: 0o666, flag: 'w'}) | file |
+| WrittenFileSync | `fs.writeFileSync` | file, data, options({encoding: 'utf8', mode: 0o666, flag: 'w'}) | file |
+
 
 [npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-fs.svg
 [npm-url]: https://npmjs.org/package/@guseyn/cutie-fs
