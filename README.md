@@ -7,7 +7,7 @@
 
 # Examples
 
-You can find examples of using this library in the [test directory](https://github.com/Guseyn/cutie-fs/tree/master/test)
+You can find examples of using this library in the [test directory](https://github.com/Guseyn/cutie-fs/tree/master/test).
 
 # Usage
 
