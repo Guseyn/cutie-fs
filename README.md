@@ -92,7 +92,15 @@ const {
 | ReadFilesOfDirectorySync | `fs.readdirSync` | path, options('utf8') | file[] |
 | ReadFilesOfDirectoryRecursively | [readFilesOfDirectoryRecursively](https://github.com/Guseyn/cutie-fs/blob/master/src/custom-calls/readFilesOfDirectoryRecursively.js) | path, options('utf8') | file[] |
 
+## read-stream
 
+| Async Object  | Async/sync call | Parameters | Representation result |
+| ------------- | ----------------| ---------- | --------------------- |
+|  BytesReadFromReadStream | `readStream.bytesRead` | readStream | number of bytes read so far |
+| CreatedReadStream | `fs.createReadStream` | path, options({flags: 'r', encoding: null, fd: null, mode: 0o666, autoClose: true, highWaterMark: 64 * 1024} | ReadStream |
+| PathOfReadStream | `readStream.path` | readStream | the path to the file the stream is reading |
+| ReadStreamWithCloseEvent | `readStream.on('close', event)` | readStream, event(an Event with definedBody()) | readStream |
+| ReadStreamWithOpenEvent | `readStream.on('open', event)` | readStream, event(an Event with definedBody(fd)) | readStream |
 
 [npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-fs.svg
 [npm-url]: https://npmjs.org/package/@guseyn/cutie-fs
