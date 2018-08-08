@@ -16,6 +16,7 @@ const {
   // Needed async objects here from the table below
 } = require('@guseyn/cutie-fs');
 ```
+## data
 
 | Async Object  | Async/sync call | Parameters | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
@@ -29,6 +30,11 @@ const {
 | WrittenBufferByFDSync | `fs.writeSync` | fd, buffer [, offset[, length[, position]]] | buffer |
 | WrittenDataByFD | `fs.write` | fd, string [, position[, encoding]]| string |
 | WrittenDataByFD | `fs.writeSync` | fd, string [, position[, encoding]]| string |
+
+## file
+
+| Async Object  | Async/sync call | Parameters | Representation result |
+| ------------- | ----------------| ---------- | --------------------- |
 | AccessibleFile | `fs.access` | path, mode (fs.constants.F_OK) | file (as path) or error |
 | AccessibleFileSync | `fs.accessSync` | path, mode (fs.constants.F_OK) | file (as path) or error |
 | AppendedFile | `fs.appendFile` | file, data, options({encoding: 'utf8', mode: 0o666, flag: 'a'}) | file |
