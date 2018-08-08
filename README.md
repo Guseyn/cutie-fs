@@ -4,6 +4,19 @@
 
 [Cutie](https://github.com/Guseyn/cutie) extension for fs module in Node. It's based on the [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
 
+
+# Examples
+
+You can find examples of using this library in the [test directory](https://github.com/Guseyn/cutie-fs/tree/master/test)
+
+# Usage
+
+```
+const {
+  // Needed async objects here from the table below
+} = require('@guseyn/cutie-fs');
+```
+
 | Async Object  | Async/sync call | Parameters | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | ReadBufferByFD | `fs.read` | fd, buffer, offset, length, position | buffer |
@@ -65,16 +78,4 @@
 
 [npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-fs.svg
 [npm-url]: https://npmjs.org/package/@guseyn/cutie-fs
-
-# Usage
-
-```
-const {
-  // Needed async objects here from the table above
-} = require('@guseyn/cutie-fs');
-```
-
-# Examples
-
-You can find examples of using this library in the [test directory](https://github.com/Guseyn/cutie-fs/tree/master/test)
 
