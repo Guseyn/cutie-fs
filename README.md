@@ -11,7 +11,7 @@ You can find examples of using this library in the [test directory](https://gith
 
 # Usage
 
-```
+```js
 const {
   // Needed async objects here from the table below
 } = require('@guseyn/cutie-fs');
