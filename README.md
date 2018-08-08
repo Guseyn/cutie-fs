@@ -28,11 +28,51 @@
 | CreatedDirectorySync | `fs.mkdirSync` | path, mode(0o777) | file (as path) |
 | CreatedTemporaryDirectory | `fs.mkdtemp` | prefix, options('utf8') | file (dir) |
 | CreatedTemporaryDirectorySync | `fs.mkdtempSync` | prefix, options('utf8') | file (dir) |
-|  |  |  |  |
-|  |  |  |  |
+| DeletedDirectory | `fs.rmdir` | path | file (as path) |
+| DeletedDirectorySync | `fs.rmdirSync` | path | file (as path) |
+| DoesFileExistSync | path | fs.existsSync | boolean |
+| FileWithChangedOwnerByFD | `fs.fchown` | fd, uid, gid | file (as fd) |
+| FileWithChangedOwnerByFDSync | `fs.fchownSync` | fd, uid, gid | file (as fd) |
+| FileWithChangedPermissionsByFD | `fs.fchmod` | fd, mode | file (as fd) |
+| FileWithChangedPermissionsByFDSync | `fs.fchmodSync` | fd, mode | file (as fd) |
+| FileWithChangedPermissionsByPath | `fs.chmod` | path, mode | file (as path) |
+| FileWithChangedPermissionsByPathSync | `fs.chmodSync` | path, mode | file (as path) |
+| FileWithChangedTimesByFD | `fs.futimes` | fd, atime, mtime | file (as fd) |
+| FileWithChangedTimesByFDSync | `fs.futimesSync` | fd, atime, mtime | file (as fd) |
+| FileWithChangedTimesByPath | `fs.utimes` | path, atime, mtime | file (as path) |
+| FileWithChangedTimesByPathSync | `fs.utimesSync` | path, atime, mtime | file (as path) |
+| FileWithSyncedData | `fs.fdatasync` | fd | file (as fd) |
+| FileWithSyncedDataSync | `fs.fdatasyncSync` | fd | file (as fd) |
+| LinkedFile | `fs.link` | existingPath, newPath | file (as newPath) |
+| LinkedFileSync | `fs.linkSync` | existingPath, newPath | file (as newPath) |
+| LinkedFileWithChangedOwnerByPath | `fs.lchown` | path, uid, gid | file (as path) |
+| LinkedFileWithChangedOwnerByPathSync | `fs.lchownSync` | path, uid, gid | file (as path) |
+| LinkedFileWithChangedPermissionsByPath | `fs.lchmod` | path, mode | file (as path) |
+| LinkedFileWithChangedPermissionsByPathSync | `fs.lchmodSync` | path, mode | file (as path) |
+| OpenedFile | `fs.open` | path, flags, mode(0o666) | file (as fd) |
+| OpenedFileSync | `fs.openSync` | path, flags, mode(0o666) | file (as fd) |
+| RenamedFile | `fs.rename` | oldPath, newPath | file (as newPath) |
+| RenamedFileSync | `fs.renameSync` | oldPath, newPath | file (as newPath) |
+| SymbolicLinkedFile | `fs.symlink` | target, path, type('file') | file (as path) |
+| SymbolicLinkedFileSync | `fs.symlinkSync` | target, path, type('file') | file (as path) |
+| SyncedFile | `fs.fsync` | fd | file (as fd) |
+| SyncedFileSync | `fs.fsyncSync` | fd | file (as fd) |
+| TruncatedFileByFD | `fs.ftruncate` | fd, len(0) | file (as fd) |
+| TruncatedFileByFDSync | `fs.ftruncateSync` | fd, len(0) | file (as fd) |
+| UnlinkedFile | `fs.unlink` | path | file (as path) |
+| UnlinkedFileSync | `fs.unlinkSync` | path | file (as path) |
+| UnwatchedFile | `fs.unwatchFile` | fileName, listener | file (as fileName) |
 
 [npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-fs.svg
 [npm-url]: https://npmjs.org/package/@guseyn/cutie-fs
+
+# Usage
+
+```
+const {
+  // Needed async objects here from the table above
+} = require('@guseyn/cutie-fs');
+```
 
 # Examples
 
