@@ -96,7 +96,7 @@ const {
 
 | Async Object  | Async/sync call | Parameters | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
-|  BytesReadFromReadStream | `readStream.bytesRead` | readStream | number of bytes read so far |
+|  BytesReadFromReadStream | `readStream.bytesRead` | readStream | the number of bytes read so far |
 | CreatedReadStream | `fs.createReadStream` | path, options({flags: 'r', encoding: null, fd: null, mode: 0o666, autoClose: true, highWaterMark: 64 * 1024} | ReadStream |
 | PathOfReadStream | `readStream.path` | readStream | the path to the file the stream is reading |
 | ReadStreamWithCloseEvent | `readStream.on('close', event)` | readStream, event(an Event with definedBody()) | readStream |
