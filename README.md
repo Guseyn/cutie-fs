@@ -84,6 +84,15 @@ const {
 | WrittenFile | `fs.writeFile` | file, data, options({encoding: 'utf8', mode: 0o666, flag: 'w'}) | file |
 | WrittenFileSync | `fs.writeFileSync` | file, data, options({encoding: 'utf8', mode: 0o666, flag: 'w'}) | file |
 
+## files
+
+| Async Object  | Async/sync call | Parameters | Representation result |
+| ------------- | ----------------| ---------- | --------------------- |
+| ReadFilesOfDirectory | `fs.readdir` | path, options('utf8') | file[] |
+| ReadFilesOfDirectorySync | `fs.readdirSync` | path, options('utf8') | file[] |
+| ReadFilesOfDirectoryRecursively | [readFilesOfDirectoryRecursively](https://github.com/Guseyn/cutie-fs/blob/master/src/custom-calls/readFilesOfDirectoryRecursively.js) | path, options('utf8') | file[] |
+
+
 
 [npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-fs.svg
 [npm-url]: https://npmjs.org/package/@guseyn/cutie-fs
