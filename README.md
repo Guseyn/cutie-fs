@@ -16,6 +16,8 @@ const {
   // Needed async objects here from the table below
 } = require('@guseyn/cutie-fs');
 ```
+For more information about parameters in the async objects visit [docs of Node](https://nodejs.org/en/docs/).
+
 ## data
 
 | Async Object  | Async/sync call | Parameters | Representation result |
