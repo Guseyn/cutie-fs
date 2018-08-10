@@ -101,8 +101,8 @@ For more information about parameters in the async objects visit [docs of Node](
 |  BytesReadFromReadStream | `readStream.bytesRead` | readStream | the number of bytes read so far |
 | CreatedReadStream | `fs.createReadStream` | path, options({flags: 'r', encoding: null, fd: null, mode: 0o666, autoClose: true, highWaterMark: 64 * 1024} | ReadStream |
 | PathOfReadStream | `readStream.path` | readStream | the path to the file the stream is reading |
-| ReadStreamWithCloseEvent | `readStream.on('close', event)` | readStream, event(Event with definedBody()) | readStream |
-| ReadStreamWithOpenEvent | `readStream.on('open', event)` | readStream, event(Event with definedBody(fd)) | readStream |
+| ReadStreamWithCloseEvent | `readStream.on('close', event)` | readStream, event(Event with `definedBody()`) | readStream |
+| ReadStreamWithOpenEvent | `readStream.on('open', event)` | readStream, event(Event with `definedBody(fd)`) | readStream |
 
 ## stats
 
@@ -145,9 +145,9 @@ For more information about parameters in the async objects visit [docs of Node](
 | Async Object  | Async/sync call | Parameters | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | ClosedWatcher | `watcher.close` | watcher | FSWatcher |
-| WatcherWithCurrentAndPreviousStatsListener | `fs.watchFile` | filename, options({persistent: true, interval: 5007}), listener(Event with definedBody(current, previous)) | FSWatcher |
-| WatcherWithErrorEvent | `watcher.on('error', event)` | watcher, event(definedBody(error)) | FSWatcher |
-| WatcherWithEventTypeAndFilenameListener | `fs.watch` | filename, options({persistent: true, recursive: false, encoding: 'utf8'}), listener(Event with definedBody(eventType, filename)) | FSWatcher |
+| WatcherWithCurrentAndPreviousStatsListener | `fs.watchFile` | filename, options({persistent: true, interval: 5007}), listener(Event with `definedBody(current, previous)`) | FSWatcher |
+| WatcherWithErrorEvent | `watcher.on('error', event)` | watcher, event(Event with `definedBody(error)`) | FSWatcher |
+| WatcherWithEventTypeAndFilenameListener | `fs.watch` | filename, options({persistent: true, recursive: false, encoding: 'utf8'}), listener(Event with `definedBody(eventType, filename)`) | FSWatcher |
 
 ## write-stream
 
@@ -156,8 +156,8 @@ For more information about parameters in the async objects visit [docs of Node](
 | BytesWrittenToWriteStream | `writeStream.bytesWritten` | writeStream | the number of bytes written so far |
 | CreatedWriteStream | `fs.createWriteStream` | path, options ({flags: 'w', encoding: 'utf8', fd: null, mode: 0o666, autoClose: true}) | WriteStream |
 | PathOfWriteStream | `writeStream.path` | writeStream | the path to the file the stream is writing |
-| WriteStreamWithCloseEvent | `writeStream.on('close', event)` | writeStream, event(Event with definedBody()) | WriteStream |
-| WriteStreamWithOpenEvent | `writeStream.on('open', event)` | writeStream, event(Event with definedBody(fd)) | WriteStream |
+| WriteStreamWithCloseEvent | `writeStream.on('close', event)` | writeStream, event(Event with `definedBody()`) | WriteStream |
+| WriteStreamWithOpenEvent | `writeStream.on('open', event)` | writeStream, event(Event with `definedBody(fd)`) | WriteStream |
 
 [npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-fs.svg
 [npm-url]: https://npmjs.org/package/@guseyn/cutie-fs
