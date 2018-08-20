@@ -2,7 +2,7 @@
 
 [![NPM Version][npm-image]][npm-url]
 
-[Cutie](https://github.com/Guseyn/cutie) extension for fs module in Node. It's based on the [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
+[Cutie](https://github.com/Guseyn/cutie) extension for <b>fs</b> module in Node. It's based on the [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
 
 
 # Examples
