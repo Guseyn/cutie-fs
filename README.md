@@ -35,7 +35,7 @@ For more information about parameters in the async objects visit [docs of Node](
 
 ## file
 
-| Async Object  | Async/sync call | Parameters | Representation result |
+| Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `AccessibleFile` | `fs.access` | `path, mode (fs.constants.F_OK)` | `file(as path)` or `error` |
 | `AccessibleFileSync` | `fs.accessSync` | `path, mode(fs.constants.F_OK)` | `file(as path)` or `error` |
@@ -88,7 +88,7 @@ For more information about parameters in the async objects visit [docs of Node](
 
 ## files
 
-| Async Object  | Async/sync call | Parameters | Representation result |
+| Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `ReadFilesOfDirectory` | `fs.readdir` | `path, options('utf8')` | `file[]` |
 | `ReadFilesOfDirectorySync` | `fs.readdirSync` | `path, options('utf8')` | `file[]` |
@@ -96,7 +96,7 @@ For more information about parameters in the async objects visit [docs of Node](
 
 ## read-stream
 
-| Async Object  | Async/sync call | Parameters | Representation result |
+| Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 |  `BytesReadFromReadStream` | `readStream.bytesRead` | `readStream` | the number of bytes read so far |
 | `CreatedReadStream` | `fs.createReadStream` | `path, options({flags: 'r', encoding: null, fd: null, mode: 0o666, autoClose: true, highWaterMark: 64 * 1024})` | `ReadStream` |
@@ -106,7 +106,7 @@ For more information about parameters in the async objects visit [docs of Node](
 
 ## stats
 
-| Async Object  | Async/sync call | Parameters | Representation result |
+| Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `BirthTime` | `stats.birthtime` | `stats` | `time` |
 | `BirthTimeInMs` | `stats.birthtimeMs` | `stats` | `number` |
@@ -142,7 +142,7 @@ For more information about parameters in the async objects visit [docs of Node](
 
 ## watcher
 
-| Async Object  | Async/sync call | Parameters | Representation result |
+| Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `ClosedWatcher` | `watcher.close` | `watcher` | `FSWatcher` |
 | `WatcherWithCurrentAndPreviousStatsListener` | `fs.watchFile` | `filename, options({persistent: true, interval: 5007}), listener(Event with definedBody(current, previous))` | `FSWatcher` |
@@ -151,7 +151,7 @@ For more information about parameters in the async objects visit [docs of Node](
 
 ## write-stream
 
-| Async Object  | Async/sync call | Parameters | Representation result |
+| Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
 | `BytesWrittenToWriteStream` | `writeStream.bytesWritten` | `writeStream` | the number of bytes written so far |
 | `CreatedWriteStream` | `fs.createWriteStream` | `path, options ({flags: 'w', encoding: 'utf8', fd: null, mode: 0o666, autoClose: true})` | `WriteStream` |
