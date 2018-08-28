@@ -1,6 +1,6 @@
 'use strict'
 
-const { EqualAssertion } = require('@guseyn/cutie-assert');
+const { EqualAssertion } = require('@cuties/assert');
 const {
   ReadLinkByPath,
   SymbolicLinkedFile,

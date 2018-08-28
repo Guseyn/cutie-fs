@@ -2,17 +2,17 @@
 
 const {
   AsyncObject, as
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const {
   Assertion,
   DeepEqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   Is,
   IsNumber,
   IsBoolean,
   IsString
-} = require('@guseyn/cutie-is');
+} = require('@cuties/is');
 const {
   OpenedFile,
   ClosedFile,

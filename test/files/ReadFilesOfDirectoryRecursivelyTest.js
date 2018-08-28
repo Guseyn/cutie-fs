@@ -2,10 +2,10 @@
 
 const {
   AsyncObject
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const {
   DeepEqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   ReadFilesOfDirectoryRecursively
 } = require('./../../index');

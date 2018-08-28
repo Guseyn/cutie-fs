@@ -1,11 +1,11 @@
 'use strict'
 
-const { Assertion } = require('@guseyn/cutie-assert');
+const { Assertion } = require('@cuties/assert');
 const {
   AllocatedBuffer,
   AreBuffersEqual,
   BufferFromString,
-} = require('@guseyn/cutie-buffer');
+} = require('@cuties/buffer');
 const {
   ReadDataByPath,
   WrittenFile

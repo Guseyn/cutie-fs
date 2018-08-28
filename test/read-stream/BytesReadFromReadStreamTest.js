@@ -4,21 +4,21 @@ const fs = require('fs');
 
 const {
   as, Event, AsyncObject
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   BufferFromString,
   BufferLength
-} = require('@guseyn/cutie-buffer');
+} = require('@cuties/buffer');
 const {
   CreatedReadStream,
   BytesReadFromReadStream
 } = require('./../../index');
 const {
   ReadDataFromReadable
-} = require('@guseyn/cutie-stream');
+} = require('@cuties/stream');
 
 const file = './test/read-stream/files/test-1.txt';
 const data = 'test buffer';

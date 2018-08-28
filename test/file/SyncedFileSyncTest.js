@@ -1,9 +1,9 @@
 'use strict'
 
-const { as } = require('@guseyn/cutie');
+const { as } = require('@cuties/cutie');
 const {
   Assertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   SyncedFileSync,
   OpenedFile,

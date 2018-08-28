@@ -1,9 +1,9 @@
 'use strict'
 
-const { as } = require('@guseyn/cutie');
+const { as } = require('@cuties/cutie');
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   UnlinkedFileSync,
   WrittenFile,

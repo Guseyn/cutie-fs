@@ -1,7 +1,7 @@
 'use strict'
 
-const { as } = require('@guseyn/cutie');
-const { EqualAssertion } = require('@guseyn/cutie-assert');
+const { as } = require('@cuties/cutie');
+const { EqualAssertion } = require('@cuties/assert');
 const {
   WrittenFile,
   OpenedFile,

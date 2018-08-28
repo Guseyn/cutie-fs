@@ -2,7 +2,7 @@
 
 const {
   DeepEqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   ReadFilesOfDirectorySync
 } = require('./../../index');

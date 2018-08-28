@@ -1,9 +1,9 @@
 const {
   as
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   OpenedFile,
   FileWithSyncedDataSync,

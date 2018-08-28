@@ -4,14 +4,14 @@ const fs = require('fs');
 
 const {
   as, Event, AsyncObject
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   BufferFromString,
   BufferLength
-} = require('@guseyn/cutie-buffer');
+} = require('@cuties/buffer');
 const {
   CreatedWriteStream,
   BytesWrittenToWriteStream
@@ -19,7 +19,7 @@ const {
 const {
   WrittenWritable,
   EndedWritable
-} = require('@guseyn/cutie-stream');
+} = require('@cuties/stream');
 
 const file = './test/write-stream/files/test-1.txt';
 const data = 'test buffer';

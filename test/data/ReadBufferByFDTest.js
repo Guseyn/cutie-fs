@@ -1,13 +1,13 @@
 'use strict'
 
-const { as } = require('@guseyn/cutie');
-const { Assertion } = require('@guseyn/cutie-assert');
+const { as } = require('@cuties/cutie');
+const { Assertion } = require('@cuties/assert');
 const {
   AllocatedBuffer,
   AreBuffersEqual,
   BufferFromString,
   BufferLength
-} = require('@guseyn/cutie-buffer');
+} = require('@cuties/buffer');
 const {
   OpenedFile,
   ReadBufferByFD,
