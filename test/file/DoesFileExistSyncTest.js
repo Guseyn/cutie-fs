@@ -3,7 +3,7 @@
 const {
   Assertion,
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   DoesFileExistSync
 } = require('./../../index');

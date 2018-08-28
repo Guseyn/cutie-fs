@@ -14,7 +14,7 @@ You can find examples of using this library in the [test directory](https://gith
 ```js
 const {
   // Needed async objects here from the table below
-} = require('@guseyn/cutie-fs');
+} = require('@cuties/fs');
 ```
 For more information about parameters in the async objects visit [docs of Node](https://nodejs.org/en/docs/) for <b>fs</b> module.
 
@@ -159,6 +159,6 @@ For more information about parameters in the async objects visit [docs of Node](
 | `WriteStreamWithCloseEvent` | `writeStream.on('close', event)` | `writeStream, event(Event with definedBody())` | `WriteStream` |
 | `WriteStreamWithOpenEvent` | `writeStream.on('open', event)` | `writeStream, event(Event with definedBody(fd))` | `WriteStream` |
 
-[npm-image]: https://img.shields.io/npm/v/@guseyn/cutie-fs.svg
-[npm-url]: https://npmjs.org/package/@guseyn/cutie-fs
+[npm-image]: https://img.shields.io/npm/v/@cuties/fs.svg
+[npm-url]: https://npmjs.org/package/@cuties/fs
 

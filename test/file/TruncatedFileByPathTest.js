@@ -1,15 +1,15 @@
 'use strict'
 
-const { as } = require('@guseyn/cutie');
+const { as } = require('@cuties/cutie');
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   AllocatedBuffer,
   StringFromBuffer,
   BufferLength,
   BufferFromString,
-} = require('@guseyn/cutie-buffer');
+} = require('@cuties/buffer');
 const {
   TruncatedFileByPath,
   WrittenFile,

@@ -3,14 +3,14 @@
 const {
   Assertion,
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   AreBuffersEqual,
   BufferFromString
-} = require('@guseyn/cutie-buffer');
+} = require('@cuties/buffer');
 const {
   ErrorMessage
-} = require('@guseyn/cutie-error');
+} = require('@cuties/error');
 const {
   AccessibleFileSync,
   FileWithChangedPermissionsByPath,

@@ -2,14 +2,14 @@
 
 const {
   as
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const { 
   ClosedFile,
   OpenedFile
 } = require('./../../index');
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 
 const file = './test/file/files/test-6.txt';
 

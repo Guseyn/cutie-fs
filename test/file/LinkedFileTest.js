@@ -1,13 +1,13 @@
 const {
   as
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const {
   Assertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   AreBuffersEqual,
   BufferFromString
-} = require('@guseyn/cutie-buffer');
+} = require('@cuties/buffer');
 const {
   OpenedFile,
   LinkedFile,

@@ -1,6 +1,6 @@
 'use strict'
 
-const AsyncObject = require('@guseyn/cutie').AsyncObject;
+const AsyncObject = require('@cuties/cutie').AsyncObject;
 const fs = require('fs');
 
 // Represented result is a file (as path) that is accessible (if not then onError is being invoked)

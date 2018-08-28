@@ -2,7 +2,7 @@
 
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   OpenedFile,
   FileWithChangedPermissionsByPath,

@@ -2,13 +2,13 @@
 
 const {
   as, Event
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const {
   EqualAssertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   ListenerCount
-} = require('@guseyn/cutie-event');
+} = require('@cuties/event');
 const {
   WatcherWithEventTypeAndFilenameListener,
   ClosedWatcher

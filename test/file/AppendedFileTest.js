@@ -7,11 +7,11 @@ const {
 } = require('./../../index');
 const {
   Assertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   AreBuffersEqual,
   BufferFromString
-} = require('@guseyn/cutie-buffer');
+} = require('@cuties/buffer');
 
 const file = './test/file/files/test-4.txt';
 const data = 'test buffer';

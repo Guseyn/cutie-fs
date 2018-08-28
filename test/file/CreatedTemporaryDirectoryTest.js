@@ -2,10 +2,10 @@
 
 const {
   as
-} = require('@guseyn/cutie');
+} = require('@cuties/cutie');
 const {
   Assertion
-} = require('@guseyn/cutie-assert');
+} = require('@cuties/assert');
 const {
   StatsByPath,
   IsDirectory,
