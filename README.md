@@ -29,7 +29,6 @@ For more information about parameters in the async objects visit [docs of Node](
 | `ReadLinkByPath` | `fs.readlink` | `path, options('utf8')` | `linkstring` |
 | `ReadLinkByPathSync` | `fs.readlinkSync` | `path, options('utf8')` | `linkstring` |
 | `WrittenBufferByFD` | `fs.write` | `fd, buffer[, offset[, length[, position]]]` | `buffer` |
-| `WrittenBufferByFDSync` | `fs.writeSync` | `fd, buffer[, offset[, length[, position]]]` | `buffer` |
 | `WrittenDataByFD` | `fs.write` | `fd, string[, position[, encoding]]` | `string` |
 | `WrittenDataByFD` | `fs.writeSync` | `fd, string[, position[, encoding]]`| `string` |
 
@@ -42,7 +41,6 @@ For more information about parameters in the async objects visit [docs of Node](
 | `AppendedFile` | `fs.appendFile` | `file, data, options({encoding: 'utf8', mode: 0o666, flag: 'a'})` | `file` |
 | `AppendedFileSync` | `fs.appendFileSync` | `file, data, options({encoding: 'utf8', mode: 0o666, flag: 'a'})` | `file` |
 | `ClosedFile` | `fs.close` | `fd` | `file(as fd)` |
-| `ClosedFileSync` | `fs.closeSync` | `fd` | `file(as fd)` |
 | `CopiedFile` | `fs.copyFile` | `src, dest, flags(0)` | `files(as dest)` |
 | `CopiedFileSync` | `fs.copyFileSync` | `src, dest, flags(0)` | `files(as dest)` |
 | `CreatedDirectory` | `fs.mkdir` | `path, mode(0o777)` | `file(as path)` |
