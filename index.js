@@ -7,7 +7,6 @@ module.exports = {
   ReadLinkByPath: require('./src/data/ReadLinkByPath'),
   ReadLinkByPathSync: require('./src/data/ReadLinkByPathSync'),
   WrittenBufferByFD: require('./src/data/WrittenBufferByFD'),
-  WrittenBufferByFDSync: require('./src/data/WrittenBufferByFDSync'),
   WrittenDataByFD: require('./src/data/WrittenDataByFD'),
   WrittenDataByFDSync: require('./src/data/WrittenDataByFDSync'),
 
@@ -16,7 +15,6 @@ module.exports = {
   AppendedFile: require('./src/file/AppendedFile'),
   AppendedFileSync: require('./src/file/AppendedFileSync'),
   ClosedFile: require('./src/file/ClosedFile'),
-  ClosedFileSync: require('./src/file/ClosedFileSync'),
   CopiedFile: require('./src/file/CopiedFile'),
   CopiedFileSync: require('./src/file/CopiedFileSync'),
   CreatedDirectory: require('./src/file/CreatedDirectory'),
