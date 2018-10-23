@@ -26,6 +26,7 @@ For more information about parameters in the async objects visit [docs of Node](
 | `ReadBufferByFDSync` | `fs.readSync`  | `fd, buffer, offset, length, position` | `buffer` |
 | `ReadDataByPath` | `fs.readFile` | `path, options({encoding: null, flag: 'r'})` | `buffer` or `string` |
 | `ReadDataByPathSync` | `fs.readFileSync` | `path, options({encoding: null, flag: 'r'})` | `buffer` or `string` |
+| `ReadDataFromFiles` | [readDataFromFiles](https://github.com/Guseyn/cutie-fs/blob/master/src/custom-calls/readDataFromFiles.js) | `files, options({encoding: null, flag: 'r'})` | `object: {fileName1: data1, fileName2: data2, ... }` |
 | `ReadLinkByPath` | `fs.readlink` | `path, options('utf8')` | `linkstring` |
 | `ReadLinkByPathSync` | `fs.readlinkSync` | `path, options('utf8')` | `linkstring` |
 | `WrittenBufferByFD` | `fs.write` | `fd, buffer[, offset[, length[, position]]]` | `buffer` |

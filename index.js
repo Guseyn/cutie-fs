@@ -4,6 +4,7 @@ module.exports = {
   ReadBufferByFDSync: require('./src/data/ReadBufferByFDSync'),
   ReadDataByPath: require('./src/data/ReadDataByPath'),
   ReadDataByPathSync: require('./src/data/ReadDataByPathSync'),
+  ReadDataFromFiles: require('./src/data/ReadDataFromFiles'),
   ReadLinkByPath: require('./src/data/ReadLinkByPath'),
   ReadLinkByPathSync: require('./src/data/ReadLinkByPathSync'),
   WrittenBufferByFD: require('./src/data/WrittenBufferByFD'),
