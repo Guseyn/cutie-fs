@@ -41,7 +41,7 @@ new DeepEqualAssertion(
     'test/files/dirs/test-dir-3/test-dir-3-1/test-dir-3-1-1/test-3-1-1-2.txt',
     'test/files/dirs/test-dir-3/test-dir-3-2/test-3-2-1.txt',
     'test/files/dirs/test-dir-3/test-dir-3-2/test-3-2-2.txt',
-    'test/files/dirs/test-dir-3/test-dir-3-2/test-dir-3-2-1/test-dir-3-2-1-1.txt',
+    'test/files/dirs/test-dir-3/test-dir-3-2/test-dir-3-2-1/test-3-2-1-1.txt',
     'test/files/dirs/test-dir-3/test-dir-3-3/test-3-3-1.txt',
     'test/files/dirs/test-dir-3/test-dir-3-3/test-3-3-2.txt']
 ).call();

@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const readDir = (dir, options, callback, retrievedFiles, dirsCountObj) => {
+// returns array of files(as paths)
+const readFilesOfDirectoryRecursively = (dir, options, callback, retrievedFiles, dirsCountObj) => {
   if (!retrievedFiles) {
     retrievedFiles = [];
   }
@@ -31,7 +32,7 @@ const readDir = (dir, options, callback, retrievedFiles, dirsCountObj) => {
               if (filesCount === files.length) {
                 dirsCountObj.count -= 1;
               }
-              readDir(fullPathFile, options, callback, retrievedFiles, dirsCountObj);
+              readFilesOfDirectoryRecursively(fullPathFile, options, callback, retrievedFiles, dirsCountObj);
             } else if (stats.isFile()) {
               retrievedFiles.push(fullPathFile);
               if (filesCount === files.length) {
@@ -48,4 +49,4 @@ const readDir = (dir, options, callback, retrievedFiles, dirsCountObj) => {
   });
 }
 
-module.exports = readDir;
+module.exports = readFilesOfDirectoryRecursively;
