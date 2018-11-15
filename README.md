@@ -89,6 +89,8 @@ For more information about parameters in the async objects visit [docs of Node](
 
 | Async Object  | Async/sync call | Parameters(default value/description) | Representation result |
 | ------------- | ----------------| ---------- | --------------------- |
+| `CopiedDirectoryRecursively` | [copiedDirectoryRecursively](https://github.com/Guseyn/cutie-fs/blob/master/src/custom-calls/copiedDirectoryRecursively.js) | `dir, dest, options('utf8')` | `dest` |
+| `DeletedDirectoryRecursively` | [deletedDirectoryRecursively](https://github.com/Guseyn/cutie-fs/blob/master/src/custom-calls/deletedDirectoryRecursively.js) | `dir, options('utf8')` | `dir` |
 | `ReadFilesOfDirectory` | `fs.readdir` | `path, options('utf8')` | `file[]` |
 | `ReadFilesOfDirectorySync` | `fs.readdirSync` | `path, options('utf8')` | `file[]` |
 | `ReadFilesOfDirectoryRecursively` | [readFilesOfDirectoryRecursively](https://github.com/Guseyn/cutie-fs/blob/master/src/custom-calls/readFilesOfDirectoryRecursively.js) | `path, options('utf8')` | `file[]` |

@@ -3,17 +3,13 @@ const path = require('path');
 
 // returns array of files(as paths)
 const readFilesOfDirectoryRecursively = (dir, options, callback, retrievedFiles, dirsCountObj) => {
-  if (!retrievedFiles) {
-    retrievedFiles = [];
-  }
-  if (!dirsCountObj) {
-    dirsCountObj = {count: 1}
-  }
+  retrievedFiles = retrievedFiles || [];
+  dirsCountObj = dirsCountObj || { count: 1 };
   fs.readdir(dir, options, (error, files) => {
     if (error) {
       callback(error);
     } else {
-      let filesCount = 0;
+      let filesCountObj = { count: 0 };
       if (files.length === 0) {
         dirsCountObj.count -= 1;
         if (dirsCountObj.count === 0) {
@@ -21,29 +17,31 @@ const readFilesOfDirectoryRecursively = (dir, options, callback, retrievedFiles,
         }
       }
       files.forEach(file => {
-        let fullPathFile = path.join(dir, file);
-        fs.stat(fullPathFile, (error, stats) => {
-          if (error) {
-            callback(error);
-          } else {
-            filesCount += 1;
-            if (stats.isDirectory()) {
-              dirsCountObj.count += 1;
-              if (filesCount === files.length) {
-                dirsCountObj.count -= 1;
-              }
-              readFilesOfDirectoryRecursively(fullPathFile, options, callback, retrievedFiles, dirsCountObj);
-            } else if (stats.isFile()) {
-              retrievedFiles.push(fullPathFile);
-              if (filesCount === files.length) {
-                dirsCountObj.count -= 1;
-                if (dirsCountObj.count === 0) {
-                  callback(null, retrievedFiles);
+        ((file) => {
+          let fullFilePath = path.join(dir, file);
+          fs.stat(fullFilePath, (error, stats) => {
+            if (error) {
+              callback(error);
+            } else {
+              filesCountObj.count += 1;
+              if (stats.isDirectory()) {
+                dirsCountObj.count += 1;
+                if (filesCountObj.count === files.length) {
+                  dirsCountObj.count -= 1;
+                }
+                readFilesOfDirectoryRecursively(fullFilePath, options, callback, retrievedFiles, dirsCountObj);
+              } else if (stats.isFile()) {
+                retrievedFiles.push(fullFilePath);
+                if (filesCountObj.count === files.length) {
+                  dirsCountObj.count -= 1;
+                  if (dirsCountObj.count === 0) {
+                    callback(null, retrievedFiles);
+                  }
                 }
               }
             }
-          }
-        });
+          });
+        })(file);
       });
     }
   });
