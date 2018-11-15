@@ -63,6 +63,8 @@ module.exports = {
   WrittenFile: require('./src/file/WrittenFile'),
   WrittenFileSync: require('./src/file/WrittenFileSync'),
 
+  CopiedDirectoryRecursively: require('./src/files/CopiedDirectoryRecursively'),
+  DeletedDirectoryRecursively: require('./src/files/DeletedDirectoryRecursively'),
   ReadFilesOfDirectory: require('./src/files/ReadFilesOfDirectory'),
   ReadFilesOfDirectoryRecursively: require('./src/files/ReadFilesOfDirectoryRecursively'),
   ReadFilesOfDirectorySync: require('./src/files/ReadFilesOfDirectorySync'),
