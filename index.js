@@ -43,8 +43,6 @@ module.exports = {
   LinkedFileSync: require('./src/file/LinkedFileSync'),
   LinkedFileWithChangedOwner: require('./src/file/LinkedFileWithChangedOwner'),
   LinkedFileWithChangedOwnerSync: require('./src/file/LinkedFileWithChangedOwnerSync'),
-  LinkedFileWithChangedPermissions: require('./src/file/LinkedFileWithChangedPermissions'),
-  LinkedFileWithChangedPermissionsSync: require('./src/file/LinkedFileWithChangedPermissionsSync'),
   OpenedFile: require('./src/file/OpenedFile'),
   OpenedFileSync: require('./src/file/OpenedFileSync'),
   RenamedFile: require('./src/file/RenamedFile'),

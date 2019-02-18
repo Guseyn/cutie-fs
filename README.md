@@ -81,8 +81,6 @@ For more information about parameters in the async objects visit [docs of Node](
 | `LinkedFileSync` | `fs.linkSync` | `existingPath, newPath` | `file(as newPath)` |
 | `LinkedFileWithChangedOwnerByPath` | `fs.lchown` | `path, uid, gid` | `file(as path)` |
 | `LinkedFileWithChangedOwnerByPathSync` | `fs.lchownSync` | `path, uid, gid` | `file(as path)` |
-| `LinkedFileWithChangedPermissionsByPath` | `fs.lchmod` | `path, mode` | `file(as path)` |
-| `LinkedFileWithChangedPermissionsByPathSync` | `fs.lchmodSync` | `path, mode` | `file(as path)` |
 | `OpenedFile` | `fs.open` | `path, flags, mode(0o666)` | `file(as fd)` |
 | `OpenedFileSync` | `fs.openSync` | `path, flags, mode(0o666)` | `file(as fd)` |
 | `RenamedFile` | `fs.rename` | `oldPath, newPath` | `file(as newPath)` |
