@@ -1,32 +1,33 @@
 'use strict'
 
-const { as } = require('@cuties/cutie');
+const { as } = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   AllocatedBuffer,
   StringFromBuffer,
   BufferLength,
-  BufferFromString,
-} = require('@cuties/buffer');
+  BufferFromString
+} = require('@cuties/buffer')
 const {
   TruncatedFileByFDSync,
   OpenedFile,
   WrittenFile,
   ReadBufferByFD,
   ClosedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-38.txt';
-const data = 'test buffer';
-const truncatedLen = 4;
+const file = './test/file/files/test-38.txt'
+const file2 = './test/file/files/test-38-1.txt'
+const data = 'test buffer'
+const truncatedLen = 4
 
 new BufferLength(
   new BufferFromString(data).as('buffer')
 ).as('len')
   .after(
-    new EqualAssertion(
+    new StrictEqualAssertion(
       new StringFromBuffer(
         new ReadBufferByFD(
           new TruncatedFileByFDSync(
@@ -43,4 +44,27 @@ new BufferLength(
     ).after(
       new ClosedFile(as('fd'))
     )
-  ).call();
+  ).call()
+
+new BufferLength(
+  new BufferFromString(data).as('buffer')
+).as('len')
+  .after(
+    new StrictEqualAssertion(
+      new StringFromBuffer(
+        new ReadBufferByFD(
+          new TruncatedFileByFDSync(
+            new WrittenFile(
+              new OpenedFile(file2, 'r+').as('fd'),
+              data
+            )
+          ),
+          new AllocatedBuffer(
+            truncatedLen
+          ), 0, truncatedLen, 0
+        )
+      ), '\u0000\u0000\u0000\u0000'
+    ).after(
+      new ClosedFile(as('fd'))
+    )
+  ).call()

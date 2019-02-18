@@ -1,21 +1,20 @@
 'use strict'
 
-const { as } = require('@cuties/cutie');
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   UnlinkedFileSync,
   WrittenFile,
   DoesFileExistSync
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-42.txt';
+const file = './test/file/files/test-42.txt'
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new DoesFileExistSync(
     new UnlinkedFileSync(file)
   ), false
 ).after(
   new WrittenFile(file, '')
-).call();
+).call()

@@ -2,23 +2,23 @@
 
 const {
   Assertion,
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   DoesFileExistSync
-} = require('./../../index');
+} = require('./../../index')
 
 const existingFile = './test/file/files/test-35.txt'
-const nonExistingFile = './test/file/files/test-undefined.txt';
+const nonExistingFile = './test/file/files/test-undefined.txt'
 
 new Assertion(
   new DoesFileExistSync(
     existingFile
   )
-).call();
+).call()
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new DoesFileExistSync(
     nonExistingFile
   ), false
-).call();
+).call()

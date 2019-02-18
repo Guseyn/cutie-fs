@@ -2,15 +2,15 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   CopiedFile,
   StatsByPath,
   IsFile,
   UnlinkedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const src = './test/file/files/test-8.txt';
+const src = './test/file/files/test-8.txt'
 const dest = './test/file/files/test-8-copy.txt'
 
 new Assertion(
@@ -21,4 +21,4 @@ new Assertion(
   )
 ).after(
   new UnlinkedFile(dest)
-).call();
+).call()

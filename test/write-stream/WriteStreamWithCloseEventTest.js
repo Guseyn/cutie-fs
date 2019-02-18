@@ -2,36 +2,34 @@
 
 const {
   Event
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   ListenerCount
-} = require('@cuties/event');
+} = require('@cuties/event')
 const {
   CreatedWriteStream,
   WriteStreamWithCloseEvent
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/write-stream/files/test-4.txt';
+const file = './test/write-stream/files/test-4.txt'
 
 class CloseEvent extends Event {
-
-  constructor() {
-    super();
+  constructor () {
+    super()
   }
 
-  definedBody() {}
-
+  definedBody () {}
 }
 
-new EqualAssertion(
-  new ListenerCount( 
+new StrictEqualAssertion(
+  new ListenerCount(
     new WriteStreamWithCloseEvent(
       new CreatedWriteStream(
         file
       ), new CloseEvent()
     ), 'close'
   ), 1
-).call();
+).call()

@@ -2,16 +2,16 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   SymbolicLinkedFileSync,
   IsSymbolicLink,
   LinkedStats,
   UnlinkedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-33.txt';
-const newFile = './test/file/files/linked-test-33.txt';
+const file = './test/file/files/test-33.txt'
+const newFile = './test/file/files/linked-test-33.txt'
 
 new Assertion(
   new IsSymbolicLink(
@@ -21,4 +21,4 @@ new Assertion(
   )
 ).after(
   new UnlinkedFile(newFile)
-).call();
+).call()

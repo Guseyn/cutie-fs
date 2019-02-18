@@ -2,10 +2,10 @@
 
 const {
   as
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   FileWithChangedOwnerByFDSync,
   OpenedFile,
@@ -13,9 +13,9 @@ const {
   Uid,
   Gid,
   ClosedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-9.txt';
+const file = './test/file/files/test-9.txt'
 
 new StatsByFD(
   new OpenedFile(
@@ -23,21 +23,21 @@ new StatsByFD(
   ).as('fd')
 ).as('stats')
   .after(
-    new EqualAssertion(
+    new StrictEqualAssertion(
       new FileWithChangedOwnerByFDSync(
-        as('fd'), 
+        as('fd'),
         new Uid(as('stats')).as('uid'),
         new Gid(as('stats')).as('gid')
       ), as('fd')
     ).after(
-      new EqualAssertion(
+      new StrictEqualAssertion(
         new Uid(new StatsByFD(as('fd'))), as('uid')
       ).after(
-        new EqualAssertion(
+        new StrictEqualAssertion(
           new Gid(new StatsByFD(as('fd'))), as('gid')
         ).after(
           new ClosedFile(as('fd'))
-        ) 
+        )
       )
     )
-  ).call();
+  ).call()

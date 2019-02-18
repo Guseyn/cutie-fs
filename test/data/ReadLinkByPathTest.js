@@ -1,27 +1,26 @@
 'use strict'
 
-const { EqualAssertion } = require('@cuties/assert');
+const { StrictEqualAssertion } = require('@cuties/assert')
 const {
   ReadLinkByPath,
   SymbolicLinkedFile,
-  LinkedFile,
   UnlinkedFile,
   WrittenFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/data/files/test-6.txt';
-const linkedFile = './test/data/files/test-link-6.txt';
-const data = 'test buffer';
+const file = './test/data/files/test-6.txt'
+const linkedFile = './test/data/files/test-link-6.txt'
+const data = 'test buffer'
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new ReadLinkByPath(
     new SymbolicLinkedFile(
       new WrittenFile(file, data),
       linkedFile
-    ) 
+    )
   ), file
 ).after(
   new UnlinkedFile(
     linkedFile
   )
-).call();
+).call()

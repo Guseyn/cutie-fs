@@ -1,28 +1,26 @@
 'use strict'
 
-const fs = require('fs');
-
 const {
-  as, Event, AsyncObject
-} = require('@cuties/cutie');
+  as
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   BufferFromString,
   BufferLength
-} = require('@cuties/buffer');
+} = require('@cuties/buffer')
 const {
   CreatedWriteStream,
   BytesWrittenToWriteStream
-} = require('./../../index');
+} = require('./../../index')
 const {
   WrittenWritable,
   EndedWritable
-} = require('@cuties/stream');
+} = require('@cuties/stream')
 
-const file = './test/write-stream/files/test-1.txt';
-const data = 'test buffer';
+const file = './test/write-stream/files/test-1.txt'
+const data = 'test buffer'
 
 new BufferLength(
   new BufferFromString(data)
@@ -34,10 +32,10 @@ new BufferLength(
       ).as('ws'), data
     )
   ).after(
-    new EqualAssertion(
+    new StrictEqualAssertion(
       new BytesWrittenToWriteStream(
         as('ws')
       ), as('len')
-    ) 
+    )
   )
-).call();
+).call()

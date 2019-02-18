@@ -1,30 +1,28 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is a file (as path) that is accessible (if not then onError is being invoked)
 class AccessibleFileSync extends AsyncObject {
-
-  constructor(path, mode) {
-    super(path, mode || fs.constants.F_OK);
+  constructor (path, mode) {
+    super(path, mode || fs.constants.F_OK)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (path, mode) => {
-      fs.accessSync(path, mode);
-      return path;
+      fs.accessSync(path, mode)
+      return path
     }
   }
 
-  onErrorAndResult(error, file) {
-    return error.isNull ? file : error;
+  onErrorAndResult (error, file) {
+    return error || file
   }
 
-  continueAfterFail() {
-    return true;
+  continueAfterFail () {
+    return true
   }
-
 }
 
-module.exports = AccessibleFileSync;
+module.exports = AccessibleFileSync

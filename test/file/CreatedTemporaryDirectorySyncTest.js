@@ -2,18 +2,18 @@
 
 const {
   as
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   StatsByPath,
   IsDirectory,
   CreatedTemporaryDirectorySync,
-  DeletedDirectory,
-} = require('./../../index');
+  DeletedDirectory
+} = require('./../../index')
 
-const prefix = './test/file/dirs/';
+const prefix = './test/file/dirs/'
 
 new Assertion(
   new IsDirectory(
@@ -25,4 +25,4 @@ new Assertion(
   new DeletedDirectory(
     as('tmpdir')
   )
-).call();
+).call()

@@ -2,36 +2,36 @@
 
 const {
   as
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   FileWithChangedOwnerByPath,
   StatsByPath,
   Uid,
   Gid
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-12.txt';
+const file = './test/file/files/test-12.txt'
 
 new StatsByPath(
   file
 ).as('stats')
   .after(
-    new EqualAssertion(
+    new StrictEqualAssertion(
       new FileWithChangedOwnerByPath(
-        file, 
-        new Uid(as('stats')).as('uid'), 
+        file,
+        new Uid(as('stats')).as('uid'),
         new Gid(as('stats')).as('gid')
       ), file
     ).after(
-      new EqualAssertion(
+      new StrictEqualAssertion(
         new Uid(new StatsByPath(file)), as('uid')
       ).after(
-        new EqualAssertion(
+        new StrictEqualAssertion(
           new Gid(new StatsByPath(file)), as('gid')
         )
       )
     )
-  ).call();
+  ).call()

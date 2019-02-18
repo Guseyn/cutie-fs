@@ -1,15 +1,29 @@
 # cutie-fs
 
-[![NPM Version][npm-image]][npm-url]
+[![NPM Version](https://img.shields.io/npm/v/@cuties/fs.svg)](https://npmjs.org/package/@cuties/fs)
+[![Build Status](https://travis-ci.org/Guseyn/cutie-fs.svg?branch=master)](https://travis-ci.org/Guseyn/cutie-fs)
+[![codecov](https://codecov.io/gh/Guseyn/cutie-fs/branch/master/graph/badge.svg)](https://codecov.io/gh/Guseyn/cutie-fs)
 
 [Cutie](https://github.com/Guseyn/cutie) extension for <b>fs</b> module in Node. It's based on the [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
 
 
-# Examples
+## Examples
 
 You can find examples of using this library in the [test directory](https://github.com/Guseyn/cutie-fs/tree/master/test).
 
-# Usage
+## Install
+
+`npm install @cuties/fs`
+
+## Run test
+
+`npm test`
+
+## Run build
+
+`npm run build`
+
+## Usage
 
 ```js
 const {
@@ -159,7 +173,3 @@ For more information about parameters in the async objects visit [docs of Node](
 | `PathOfWriteStream` | `writeStream.path` | `writeStream` | the path to the file the stream is writing |
 | `WriteStreamWithCloseEvent` | `writeStream.on('close', event)` | `writeStream, event(Event with definedBody())` | `WriteStream` |
 | `WriteStreamWithOpenEvent` | `writeStream.on('open', event)` | `writeStream, event(Event with definedBody(fd))` | `WriteStream` |
-
-[npm-image]: https://img.shields.io/npm/v/@cuties/fs.svg
-[npm-url]: https://npmjs.org/package/@cuties/fs
-

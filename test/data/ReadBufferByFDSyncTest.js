@@ -1,23 +1,21 @@
 'use strict'
 
-const { as } = require('@cuties/cutie');
-const { Assertion } = require('@cuties/assert');
+const { as } = require('@cuties/cutie')
+const { Assertion } = require('@cuties/assert')
 const {
   AllocatedBuffer,
-  AreBuffersEqual,
   BufferFromString,
   BufferLength
-} = require('@cuties/buffer');
+} = require('@cuties/buffer')
 const {
   OpenedFile,
   ReadBufferByFDSync,
   WrittenFile,
-  UnlinkedFile,
   ClosedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/data/files/test-1.txt';
-const data = 'test buffer';
+const file = './test/data/files/test-1.txt'
+const data = 'test buffer'
 
 new BufferLength(
   new BufferFromString(data).as('buffer')
@@ -36,4 +34,4 @@ new BufferLength(
     ).after(
       new ClosedFile(as('fd'))
     )
-  ).call();
+  ).call()

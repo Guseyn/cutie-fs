@@ -2,15 +2,15 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   CreatedDirectorySync,
   DeletedDirectory,
   StatsByPath,
   IsDirectory
-} = require('./../../index');
+} = require('./../../index')
 
-const dir = './test/file/dirs/dir1';
+const dir = './test/file/dirs/dir1'
 
 new Assertion(
   new IsDirectory(
@@ -20,4 +20,4 @@ new Assertion(
   )
 ).after(
   new DeletedDirectory(dir)
-).call();
+).call()

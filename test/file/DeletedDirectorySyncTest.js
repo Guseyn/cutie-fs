@@ -1,17 +1,17 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   CreatedDirectory,
-  DeletedDirectorySync,
-} = require('./../../index');
+  DeletedDirectorySync
+} = require('./../../index')
 
-const file = './test/file/dirs/dir3';
+const file = './test/file/dirs/dir3'
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new DeletedDirectorySync(
     new CreatedDirectory(file)
   ), file
-).call();
+).call()

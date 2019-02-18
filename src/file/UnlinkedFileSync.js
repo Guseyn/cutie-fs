@@ -1,22 +1,20 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is file (as path)
 class UnlinkedFileSync extends AsyncObject {
-
-  constructor(path) {
-    super(path);
+  constructor (path) {
+    super(path)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (path) => {
-      fs.unlinkSync(path);
-      return path;
+      fs.unlinkSync(path)
+      return path
     }
   }
-
 }
 
-module.exports = UnlinkedFileSync;
+module.exports = UnlinkedFileSync

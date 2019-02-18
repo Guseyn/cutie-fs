@@ -1,22 +1,20 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is file (as newPath)
 class RenamedFileSync extends AsyncObject {
-
-  constructor(oldPath, newPath) {
-    super(oldPath, newPath);
+  constructor (oldPath, newPath) {
+    super(oldPath, newPath)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (oldPath, newPath) => {
-      fs.renameSync(oldPath, newPath);
-      return newPath;
+      fs.renameSync(oldPath, newPath)
+      return newPath
     }
   }
-
 }
 
-module.exports = RenamedFileSync;
+module.exports = RenamedFileSync

@@ -1,5 +1,7 @@
-const executor = require('test-executor');
+'use strict'
 
-//find . -name '.DS_Store' -type f -delete
+const { ExecutedTests } = require('test-executor')
 
-executor('./test');
+new ExecutedTests(
+  './test'
+).call()

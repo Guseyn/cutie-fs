@@ -1,18 +1,17 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
-  OpenedFile,
   FileWithChangedPermissionsByPath,
   StatsByPath,
   Mode
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-16.txt';
+const file = './test/file/files/test-16.txt'
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new Mode(
     new StatsByPath(
       new FileWithChangedPermissionsByPath(
@@ -24,4 +23,4 @@ new EqualAssertion(
   new FileWithChangedPermissionsByPath(
     file, 0o777
   )
-).call();
+).call()

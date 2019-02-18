@@ -1,20 +1,18 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
+const AsyncObject = require('@cuties/cutie').AsyncObject
 
 // Represented result is number
 class BlkSize extends AsyncObject {
-
-  constructor(stats) {
-    super(stats);
+  constructor (stats) {
+    super(stats)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (stats) => {
-      return stats.blksize;
+      return stats.blksize
     }
   }
-
 }
 
-module.exports = BlkSize;
+module.exports = BlkSize

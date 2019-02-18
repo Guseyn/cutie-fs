@@ -1,25 +1,22 @@
-const {
-  as
-} = require('@cuties/cutie');
+'use strict'
+
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   AreBuffersEqual,
   BufferFromString
-} = require('@cuties/buffer');
+} = require('@cuties/buffer')
 const {
-  OpenedFile,
   LinkedFileSync,
   UnlinkedFile,
   WrittenFile,
   LinkedStatsSync,
-  StatsByPath,
   IsFile,
   ReadDataByPath
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-23.txt';
+const file = './test/file/files/test-23.txt'
 const newFile = './test/file/files/linked-test-23.txt'
 
 new Assertion(
@@ -41,4 +38,4 @@ new Assertion(
   ).after(
     new UnlinkedFile(newFile)
   )
-).call();
+).call()

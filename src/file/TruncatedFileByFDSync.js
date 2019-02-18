@@ -1,22 +1,20 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is file (as fd)
 class TruncatedFileByFDSync extends AsyncObject {
-
-  constructor(fd, len) {
-    super(fd, len || 0);
+  constructor (fd, len) {
+    super(fd, len || 0)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (fd, len) => {
-      fs.ftruncateSync(fd, len);
-      return fd;
+      fs.ftruncateSync(fd, len)
+      return fd
     }
   }
-
 }
 
-module.exports = TruncatedFileByFDSync;
+module.exports = TruncatedFileByFDSync

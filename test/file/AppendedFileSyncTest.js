@@ -1,20 +1,20 @@
 'use strict'
 
-const { 
+const {
   AppendedFileSync,
   ReadDataByPath,
   WrittenFile
-} = require('./../../index');
+} = require('./../../index')
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   AreBuffersEqual,
   BufferFromString
-} = require('@cuties/buffer');
+} = require('@cuties/buffer')
 
-const file = './test/file/files/test-3.txt';
-const data = 'test buffer';
+const file = './test/file/files/test-3.txt'
+const data = 'test buffer'
 
 new Assertion(
   new AreBuffersEqual(
@@ -23,7 +23,7 @@ new Assertion(
         new AppendedFileSync(file, data), data
       )
     ), new BufferFromString(`${data}${data}`)
-  ) 
+  )
 ).after(
   new WrittenFile(file, '', 'utf8')
-).call();
+).call()

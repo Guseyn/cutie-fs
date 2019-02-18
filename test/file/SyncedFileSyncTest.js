@@ -1,18 +1,18 @@
 'use strict'
 
-const { as } = require('@cuties/cutie');
+const { as } = require('@cuties/cutie')
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   SyncedFileSync,
   OpenedFile,
   StatsByFD,
   IsFile,
   ClosedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-36.txt';
+const file = './test/file/files/test-36.txt'
 
 new Assertion(
   new IsFile(
@@ -24,4 +24,4 @@ new Assertion(
   )
 ).after(
   new ClosedFile(as('fd'))
-).call();
+).call()

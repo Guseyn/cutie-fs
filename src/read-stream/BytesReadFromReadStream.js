@@ -1,20 +1,18 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
+const AsyncObject = require('@cuties/cutie').AsyncObject
 
 // Represented result is the number of bytes read so far
 class BytesReadFromReadStream extends AsyncObject {
-
-  constructor(readStream) {
-    super(readStream);
+  constructor (readStream) {
+    super(readStream)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (readStream) => {
-      return readStream.bytesRead;
+      return readStream.bytesRead
     }
   }
-
 }
 
-module.exports = BytesReadFromReadStream;
+module.exports = BytesReadFromReadStream

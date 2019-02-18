@@ -1,22 +1,20 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is buffer or string
 class ReadDataByPath extends AsyncObject {
-
-  constructor(path, options) {
+  constructor (path, options) {
     super(path, options || {
       encoding: null,
       flag: 'r'
-    });
+    })
   }
 
-  definedAsyncCall() {
-    return fs.readFile;
+  definedAsyncCall () {
+    return fs.readFile
   }
-
 }
 
-module.exports = ReadDataByPath;
+module.exports = ReadDataByPath

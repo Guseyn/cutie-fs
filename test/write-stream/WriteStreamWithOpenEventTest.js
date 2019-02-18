@@ -2,36 +2,34 @@
 
 const {
   Event
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   ListenerCount
-} = require('@cuties/event');
+} = require('@cuties/event')
 const {
   CreatedWriteStream,
   WriteStreamWithOpenEvent
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/write-stream/files/test-5.txt';
+const file = './test/write-stream/files/test-5.txt'
 
 class OpenEvent extends Event {
-
-  constructor() {
-    super();
+  constructor () {
+    super()
   }
 
-  definedBody(fd) {}
-
+  definedBody (fd) {}
 }
 
-new EqualAssertion(
-  new ListenerCount( 
+new StrictEqualAssertion(
+  new ListenerCount(
     new WriteStreamWithOpenEvent(
       new CreatedWriteStream(
         file
       ), new OpenEvent()
     ), 'open'
   ), 1
-).call();
+).call()
