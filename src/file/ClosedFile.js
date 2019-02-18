@@ -1,26 +1,24 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is a file (fd)
 class ClosedFile extends AsyncObject {
-
-  constructor(fd) {
-    super(fd);
+  constructor (fd) {
+    super(fd)
   }
 
-  definedAsyncCall() {
+  definedAsyncCall () {
     return (fd, callback) => {
-      this.file = fd;
-      fs.close(fd, callback);
+      this.file = fd
+      fs.close(fd, callback)
     }
   }
 
-  onResult() {
-    return this.file;
+  onResult () {
+    return this.file
   }
-
 }
 
-module.exports = ClosedFile;
+module.exports = ClosedFile

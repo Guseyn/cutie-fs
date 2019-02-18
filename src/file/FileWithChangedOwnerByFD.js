@@ -1,26 +1,24 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is a file (as fd)
 class FileWithChangedOwnerByFD extends AsyncObject {
-
-  constructor(fd, uid, gid) {
-    super(fd, uid, gid);
+  constructor (fd, uid, gid) {
+    super(fd, uid, gid)
   }
 
-  definedAsyncCall() {
+  definedAsyncCall () {
     return (fd, uid, gid, callback) => {
-      this.file = fd;
-      fs.fchown(fd, uid, gid, callback);
+      this.file = fd
+      fs.fchown(fd, uid, gid, callback)
     }
   }
 
-  onResult() {
-    return this.file;
+  onResult () {
+    return this.file
   }
-
 }
 
-module.exports = FileWithChangedOwnerByFD;
+module.exports = FileWithChangedOwnerByFD

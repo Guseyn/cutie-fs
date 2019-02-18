@@ -1,23 +1,21 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is buffer
 class ReadBufferByFD extends AsyncObject {
-
-  constructor(fd, buffer, offset, length, position) {
-    super(fd, buffer, offset, length, position);
+  constructor (fd, buffer, offset, length, position) {
+    super(fd, buffer, offset, length, position)
   }
 
-  definedAsyncCall() {
-    return fs.read;
+  definedAsyncCall () {
+    return fs.read
   }
 
-  onResult(bytesRead, buffer) {
-    return buffer;
+  onResult (bytesRead, buffer) {
+    return buffer
   }
-
 }
 
-module.exports = ReadBufferByFD;
+module.exports = ReadBufferByFD

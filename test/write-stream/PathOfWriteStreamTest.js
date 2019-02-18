@@ -1,19 +1,19 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   CreatedWriteStream,
   PathOfWriteStream
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/write-stream/files/test-3.txt';
+const file = './test/write-stream/files/test-3.txt'
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new PathOfWriteStream(
     new CreatedWriteStream(
       file
     )
   ), file
-).call();
+).call()

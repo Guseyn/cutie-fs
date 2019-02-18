@@ -2,15 +2,15 @@
 
 const {
   Assertion
-} = require('@cuties/assert');
+} = require('@cuties/assert')
 const {
   RenamedFileSync,
   StatsByPath,
   IsFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-31.txt';
-const newFile = './test/file/files/renamed-test-31.txt';
+const file = './test/file/files/test-31.txt'
+const newFile = './test/file/files/renamed-test-31.txt'
 
 new Assertion(
   new IsFile(
@@ -20,4 +20,4 @@ new Assertion(
   )
 ).after(
   new RenamedFileSync(newFile, file)
-).call();
+).call()

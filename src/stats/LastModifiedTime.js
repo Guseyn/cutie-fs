@@ -1,20 +1,18 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
+const AsyncObject = require('@cuties/cutie').AsyncObject
 
 // Represented result is time
 class LastModifiedTime extends AsyncObject {
-
-  constructor(stats) {
-    super(stats);
+  constructor (stats) {
+    super(stats)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (stats) => {
-      return stats.mtime;
+      return stats.mtime
     }
   }
-
 }
 
-module.exports = LastModifiedTime;
+module.exports = LastModifiedTime

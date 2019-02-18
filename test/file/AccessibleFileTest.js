@@ -2,30 +2,25 @@
 
 const {
   Assertion,
-  EqualAssertion
-} = require('@cuties/assert');
-const {
-  AreBuffersEqual,
-  BufferFromString
-} = require('@cuties/buffer');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   ErrorMessage
-} = require('@cuties/error');
+} = require('@cuties/error')
 const {
   AccessibleFile,
-  FileWithChangedPermissionsByPath,
-} = require('./../../index');
-const fs = require('fs');
+  FileWithChangedPermissionsByPath
+} = require('./../../index')
+const fs = require('fs')
 
-const file = './test/file/files/test-2.txt';
-const data = 'test buffer';
+const file = './test/file/files/test-2.txt'
 
 new Assertion(
   new AccessibleFile(
     file, fs.constants.F_OK
   )
 ).after(
-  new EqualAssertion(
+  new StrictEqualAssertion(
     new ErrorMessage(
       new AccessibleFile(
         new FileWithChangedPermissionsByPath(file, 0o000),
@@ -37,4 +32,4 @@ new Assertion(
       file, 0o777
     )
   )
-).call();
+).call()

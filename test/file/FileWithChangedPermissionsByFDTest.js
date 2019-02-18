@@ -2,21 +2,21 @@
 
 const {
   as
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   OpenedFile,
   FileWithChangedPermissionsByFD,
   StatsByFD,
   Mode,
   ClosedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-14.txt';
+const file = './test/file/files/test-14.txt'
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new Mode(
     new StatsByFD(
       new FileWithChangedPermissionsByFD(
@@ -30,4 +30,4 @@ new EqualAssertion(
   ).after(
     new ClosedFile(as('fd'))
   )
-).call();
+).call()

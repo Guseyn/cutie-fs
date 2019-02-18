@@ -1,22 +1,20 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is a file (as path)
 class LinkedFileWithChangedOwnerByPathSync extends AsyncObject {
-
-  constructor(path, uid, gid) {
-    super(path, uid, gid);
+  constructor (path, uid, gid) {
+    super(path, uid, gid)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (path, uid, gid) => {
-      fs.lchownSync(path, uid, gid);
-      return path;
+      fs.lchownSync(path, uid, gid)
+      return path
     }
   }
-
 }
 
-module.exports = LinkedFileWithChangedOwnerByPathSync;
+module.exports = LinkedFileWithChangedOwnerByPathSync

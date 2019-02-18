@@ -1,24 +1,26 @@
+'use strict'
+
 const {
   as
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   OpenedFile,
   FileWithSyncedDataSync,
   ClosedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-21.txt';
+const file = './test/file/files/test-21.txt'
 
 new FileWithSyncedDataSync(
   new OpenedFile(file, 'r+').as('fd')
 ).as('synced_fd')
   .after(
-    new EqualAssertion(
+    new StrictEqualAssertion(
       as('fd'), as('synced_fd')
     ).after(
       new ClosedFile(as('fd'))
     )
-  ).call();
+  ).call()

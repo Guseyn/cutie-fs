@@ -1,37 +1,35 @@
 'use strict'
 
 const {
-  as, Event
-} = require('@cuties/cutie');
+  Event
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   ListenerCount
-} = require('@cuties/event');
+} = require('@cuties/event')
 const {
   WatcherWithCurrentAndPreviousStatsListener,
   UnwatchedFile
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/watcher/files/test-2.txt';
+const file = './test/watcher/files/test-2.txt'
 
 class WatchListener extends Event {
-
-  constructor() {
-    super();
+  constructor () {
+    super()
   }
 
-  definedBody(current, previous) {}
-
+  definedBody (current, previous) {}
 }
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new ListenerCount(
     new WatcherWithCurrentAndPreviousStatsListener(
-      file,  new WatchListener()
+      file, { persistent: true, interval: 5007 }, new WatchListener()
     ).as('watcher'), 'change'
   ), 1
 ).after(
   new UnwatchedFile(file)
-).call();
+).call()

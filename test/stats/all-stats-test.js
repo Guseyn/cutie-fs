@@ -2,17 +2,17 @@
 
 const {
   AsyncObject, as
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
   Assertion,
-  DeepEqualAssertion
-} = require('@cuties/assert');
+  DeepStrictEqualAssertion
+} = require('@cuties/assert')
 const {
   Is,
   IsNumber,
   IsBoolean,
   IsString
-} = require('@cuties/is');
+} = require('@cuties/is')
 const {
   OpenedFile,
   ClosedFile,
@@ -49,22 +49,20 @@ const {
   StatsByPath,
   StatsByPathSync,
   Uid
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/stats/test-file.txt';
+const file = './test/stats/test-file.txt'
 
 class StatsAssertions extends AsyncObject {
-
-  constructor(...assertions) {
-    super(...assertions);
+  constructor (...assertions) {
+    super(...assertions)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (...assertions) => {
-      return true;
+      return true
     }
   }
-
 }
 
 new StatsByFD(
@@ -172,10 +170,10 @@ new StatsByFD(
         new LastModifiedTimeInMs(as('stats'))
       )
     ),
-    new DeepEqualAssertion(
+    new DeepStrictEqualAssertion(
       new LinkedStats(file), as('stats')
     ),
-    new DeepEqualAssertion(
+    new DeepStrictEqualAssertion(
       new LinkedStatsSync(file), as('stats')
     ),
     new Assertion(
@@ -208,21 +206,21 @@ new StatsByFD(
         new Size(as('stats'))
       )
     ),
-    new DeepEqualAssertion(
+    new DeepStrictEqualAssertion(
       new BirthTime(
         new StatsByFDSync(as('fd'))
       ), new BirthTime(
         as('stats')
       )
     ),
-    new DeepEqualAssertion(
+    new DeepStrictEqualAssertion(
       new BirthTime(
         new StatsByPath(file)
       ), new BirthTime(
         as('stats')
       )
     ),
-    new DeepEqualAssertion(
+    new DeepStrictEqualAssertion(
       new BirthTime(
         new StatsByPathSync(file)
       ), new BirthTime(
@@ -237,5 +235,4 @@ new StatsByFD(
   ).after(
     new ClosedFile(as('fd'))
   )
-).call();
-
+).call()

@@ -1,22 +1,20 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is a file (as fd)
 class FileWithChangedPermissionsByFDSync extends AsyncObject {
-
-  constructor(fd, mode) {
-    super(fd, mode);
+  constructor (fd, mode) {
+    super(fd, mode)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (fd, mode, callback) => {
-      fs.fchmodSync(fd, mode, callback);
-      return fd;
+      fs.fchmodSync(fd, mode, callback)
+      return fd
     }
   }
-
 }
 
-module.exports = FileWithChangedPermissionsByFDSync;
+module.exports = FileWithChangedPermissionsByFDSync

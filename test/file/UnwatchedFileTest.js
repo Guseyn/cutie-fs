@@ -2,41 +2,39 @@
 
 const {
   as, Event
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   ListenerCount
-} = require('@cuties/event');
+} = require('@cuties/event')
 const {
   UnwatchedFile,
   WatcherWithEventTypeAndFilenameListener,
   ClosedWatcher
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-44.txt';
+const file = './test/file/files/test-44.txt'
 
 class WatchListener extends Event {
-
-  constructor() {
-    super();
+  constructor () {
+    super()
   }
 
-  definedBody(eventType, fileName) {}
-
+  definedBody (eventType, fileName) {}
 }
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new ListenerCount(
     new WatcherWithEventTypeAndFilenameListener(
-      file,  new WatchListener()
+      file, new WatchListener()
     ).as('watcher'), 'change'
   ), 1
 ).after(
   new UnwatchedFile(file)
     .after(
-      new EqualAssertion(
+      new StrictEqualAssertion(
         new ListenerCount(
           as('watcher')
         ), 0
@@ -44,4 +42,4 @@ new EqualAssertion(
         new ClosedWatcher(as('watcher'))
       )
     )
-).call();
+).call()

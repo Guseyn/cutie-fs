@@ -1,22 +1,20 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is file (as path)
 class CreatedDirectorySync extends AsyncObject {
-
-  constructor(path, mode) {
-    super(path, mode || 0o777);
+  constructor (path, mode) {
+    super(path, mode || 0o777)
   }
 
-  definedSyncCall() {
+  definedSyncCall () {
     return (path, mode) => {
-      fs.mkdirSync(path, mode);
-      return path;
+      fs.mkdirSync(path, mode)
+      return path
     }
   }
-
 }
 
-module.exports = CreatedDirectorySync;
+module.exports = CreatedDirectorySync

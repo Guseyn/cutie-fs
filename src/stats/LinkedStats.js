@@ -1,19 +1,17 @@
 'use strict'
 
-const AsyncObject = require('@cuties/cutie').AsyncObject;
-const fs = require('fs');
+const AsyncObject = require('@cuties/cutie').AsyncObject
+const fs = require('fs')
 
 // Represented result is stats
 class LinkedStats extends AsyncObject {
-
-  constructor(path) {
-    super(path);
+  constructor (path) {
+    super(path)
   }
 
-  definedAsyncCall() {
-    return fs.lstat;
+  definedAsyncCall () {
+    return fs.lstat
   }
-
 }
 
-module.exports = LinkedStats;
+module.exports = LinkedStats

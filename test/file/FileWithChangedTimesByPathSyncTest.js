@@ -2,23 +2,23 @@
 
 const {
   as
-} = require('@cuties/cutie');
+} = require('@cuties/cutie')
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
   Date,
   DateString,
   TimeString
-} = require('@cuties/date');
+} = require('@cuties/date')
 const {
   FileWithChangedTimesByPathSync,
   StatsByPath,
   LastAccessedTime,
   LastModifiedTime
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-19.txt';
+const file = './test/file/files/test-19.txt'
 
 new StatsByPath(
   new FileWithChangedTimesByPathSync(
@@ -28,34 +28,34 @@ new StatsByPath(
   )
 ).as('stats')
   .after(
-    new EqualAssertion(
+    new StrictEqualAssertion(
       new DateString(
         new LastAccessedTime(
           as('stats')
-        ).as('new_atime') 
+        ).as('new_atime')
       ),
       new DateString(
         as('atime')
       )
     ).after(
-      new EqualAssertion(
+      new StrictEqualAssertion(
         new TimeString(
           as('new_atime')
         ), new TimeString(
           as('atime')
         )
       ).after(
-        new EqualAssertion(
+        new StrictEqualAssertion(
           new DateString(
             new LastModifiedTime(
               as('stats')
             ).as('new_mtime')
-          
+
           ), new DateString(
             as('mtime')
           )
         ).after(
-          new EqualAssertion(
+          new StrictEqualAssertion(
             new TimeString(
               as('new_mtime')
             ), new TimeString(
@@ -65,4 +65,4 @@ new StatsByPath(
         )
       )
     )
-  ).call();
+  ).call()

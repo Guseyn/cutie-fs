@@ -1,22 +1,20 @@
 'use strict'
 
 const {
-  EqualAssertion
-} = require('@cuties/assert');
+  StrictEqualAssertion
+} = require('@cuties/assert')
 const {
-  OpenedFile,
   SymbolicLinkedFile,
   LinkedFileWithChangedPermissionsSync,
   LinkedStats,
-  StatsByPath,
   UnlinkedFile,
   Mode
-} = require('./../../index');
+} = require('./../../index')
 
-const file = './test/file/files/test-27.txt';
-const newFile = './test/file/files/linked-test-27.txt';
+const file = './test/file/files/test-27.txt'
+const newFile = './test/file/files/linked-test-27.txt'
 
-new EqualAssertion(
+new StrictEqualAssertion(
   new Mode(
     new LinkedStats(
       new LinkedFileWithChangedPermissionsSync(
@@ -28,4 +26,4 @@ new EqualAssertion(
   ), 41216
 ).after(
   new UnlinkedFile(newFile)
-).call();
+).call()
