@@ -8,7 +8,7 @@ class PathOfWriteStream extends AsyncObject {
     super(writeStream)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (writeStream) => {
       return writeStream.path
     }

@@ -9,7 +9,7 @@ class FileWithChangedOwnerByPath extends AsyncObject {
     super(path, uid, gid)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, uid, gid, callback) => {
       this.file = path
       fs.chown(path, uid, gid, callback)

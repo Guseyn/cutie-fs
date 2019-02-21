@@ -9,7 +9,7 @@ class CreatedDirectorySync extends AsyncObject {
     super(path, mode || 0o777)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (path, mode) => {
       fs.mkdirSync(path, mode)
       return path

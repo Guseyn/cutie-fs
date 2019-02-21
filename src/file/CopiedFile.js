@@ -9,7 +9,7 @@ class CopiedFile extends AsyncObject {
     super(src, dest, flags || 0)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (src, dest, flags, callback) => {
       this.file = dest
       fs.copyFile(src, dest, flags, callback)

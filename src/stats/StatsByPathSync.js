@@ -9,7 +9,7 @@ class StatsByPathSync extends AsyncObject {
     super(path)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return fs.statSync
   }
 }

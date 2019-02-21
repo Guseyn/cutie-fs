@@ -9,7 +9,7 @@ class LinkedFile extends AsyncObject {
     super(existingPath, newPath)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (existingPath, newPath, callback) => {
       this.file = newPath
       fs.link(existingPath, newPath, callback)

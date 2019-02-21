@@ -9,7 +9,7 @@ class FileWithChangedPermissionsByFD extends AsyncObject {
     super(fd, mode)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (fd, mode, callback) => {
       this.file = fd
       fs.fchmod(fd, mode, callback)

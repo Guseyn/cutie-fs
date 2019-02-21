@@ -8,7 +8,7 @@ class IsCharacterDevice extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.isCharacterDevice()
     }

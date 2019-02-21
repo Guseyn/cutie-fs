@@ -15,7 +15,7 @@ class CreatedWriteStream extends AsyncObject {
     })
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (path, options) => {
       return fs.createWriteStream(path, options)
     }

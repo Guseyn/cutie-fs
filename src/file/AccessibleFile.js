@@ -9,7 +9,7 @@ class AccessibleFile extends AsyncObject {
     super(path, mode || fs.constants.F_OK)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, mode, callback) => {
       this.file = path
       fs.access(path, mode, callback)

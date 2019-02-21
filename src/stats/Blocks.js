@@ -8,7 +8,7 @@ class Blocks extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.blocks
     }

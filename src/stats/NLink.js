@@ -8,7 +8,7 @@ class NLink extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.nlink
     }

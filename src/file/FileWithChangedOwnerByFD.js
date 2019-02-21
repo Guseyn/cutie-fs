@@ -9,7 +9,7 @@ class FileWithChangedOwnerByFD extends AsyncObject {
     super(fd, uid, gid)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (fd, uid, gid, callback) => {
       this.file = fd
       fs.fchown(fd, uid, gid, callback)

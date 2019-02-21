@@ -9,7 +9,7 @@ class ReadBufferByFD extends AsyncObject {
     super(fd, buffer, offset, length, position)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.read
   }
 

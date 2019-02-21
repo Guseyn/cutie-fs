@@ -8,7 +8,7 @@ class LastAccessedTimeInMs extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.atimeMs
     }

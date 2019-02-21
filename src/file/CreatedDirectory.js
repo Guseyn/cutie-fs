@@ -9,7 +9,7 @@ class CreatedDirectory extends AsyncObject {
     super(path, mode || 0o777)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, mode, callback) => {
       this.file = path
       fs.mkdir(path, mode, callback)

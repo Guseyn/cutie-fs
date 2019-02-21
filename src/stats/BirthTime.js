@@ -8,7 +8,7 @@ class BirthTime extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.birthtime
     }

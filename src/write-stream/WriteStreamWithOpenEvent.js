@@ -5,13 +5,13 @@ const AsyncObject = require('@cuties/cutie').AsyncObject
 // Represented result is a WriteStream
 class WriteStreamWithOpenEvent extends AsyncObject {
   /*
-    event is an Event with definedBody(fd)
+    event is an Event with body(fd)
   */
   constructor (writeStream, event) {
     super(writeStream, event)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (writeStream, event) => {
       writeStream.on('open', event)
       return writeStream

@@ -8,7 +8,7 @@ class IsBlockDevice extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.isBlockDevice()
     }

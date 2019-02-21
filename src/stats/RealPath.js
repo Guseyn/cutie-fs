@@ -8,7 +8,7 @@ class RealPath extends AsyncObject {
     super(path, options || 'utf8')
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.realpath
   }
 }

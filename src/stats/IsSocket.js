@@ -8,7 +8,7 @@ class IsSocket extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.isSocket()
     }

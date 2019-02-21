@@ -9,7 +9,7 @@ class StatsByPath extends AsyncObject {
     super(path)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.stat
   }
 }

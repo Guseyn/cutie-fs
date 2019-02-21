@@ -9,7 +9,7 @@ class TruncatedFileByFDSync extends AsyncObject {
     super(fd, len || 0)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (fd, len) => {
       fs.ftruncateSync(fd, len)
       return fd

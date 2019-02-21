@@ -12,7 +12,7 @@ class ReadDataFromFiles extends AsyncObject {
     })
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return readDataFromFiles
   }
 }

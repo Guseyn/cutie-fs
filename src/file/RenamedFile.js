@@ -9,7 +9,7 @@ class RenamedFile extends AsyncObject {
     super(oldPath, newPath)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (oldPath, newPath, callback) => {
       this.file = newPath
       fs.rename(oldPath, newPath, callback)

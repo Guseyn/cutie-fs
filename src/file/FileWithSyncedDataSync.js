@@ -9,7 +9,7 @@ class FileWithSyncedDataSync extends AsyncObject {
     super(fd)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (fd) => {
       fs.fdatasyncSync(fd)
       return fd

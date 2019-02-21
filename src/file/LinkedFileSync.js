@@ -9,7 +9,7 @@ class LinkedFileSync extends AsyncObject {
     super(existingPath, newPath)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (existingPath, newPath) => {
       fs.linkSync(existingPath, newPath)
       return newPath

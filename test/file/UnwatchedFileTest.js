@@ -22,7 +22,7 @@ class WatchListener extends Event {
     super()
   }
 
-  definedBody (eventType, fileName) {}
+  body (eventType, fileName) {}
 }
 
 new StrictEqualAssertion(

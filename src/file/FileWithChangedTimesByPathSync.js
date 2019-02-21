@@ -9,7 +9,7 @@ class FileWithChangedTimesByPathSync extends AsyncObject {
     super(path, atime, mtime)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (path, atime, mtime) => {
       fs.utimesSync(path, atime, mtime)
       return path

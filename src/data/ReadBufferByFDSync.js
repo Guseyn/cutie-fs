@@ -9,7 +9,7 @@ class ReadBufferByFDSync extends AsyncObject {
     super(fd, buffer, offset, length, position)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (fd, buffer, offset, length, position) => {
       fs.readSync(fd, buffer, offset, length, position)
       return buffer

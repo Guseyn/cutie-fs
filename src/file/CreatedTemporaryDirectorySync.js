@@ -9,7 +9,7 @@ class CreatedTemporaryDirectorySync extends AsyncObject {
     super(prefix, options || 'utf8')
   }
 
-  definedSyncCall () {
+  syncCall () {
     return fs.mkdtempSync
   }
 }

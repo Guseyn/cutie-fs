@@ -9,7 +9,7 @@ class StatsByFD extends AsyncObject {
     super(fd)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.fstat
   }
 }

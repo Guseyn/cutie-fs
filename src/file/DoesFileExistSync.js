@@ -11,7 +11,7 @@ class DoesFileExistSync extends AsyncObject {
     super(path)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return fs.existsSync
   }
 }

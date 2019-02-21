@@ -9,7 +9,7 @@ class ReadFilesOfDirectory extends AsyncObject {
     super(path, options || 'utf8')
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.readdir
   }
 }

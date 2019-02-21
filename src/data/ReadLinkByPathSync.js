@@ -9,7 +9,7 @@ class ReadLinkByPathSync extends AsyncObject {
     super(path, options || 'utf8')
   }
 
-  definedSyncCall () {
+  syncCall () {
     return fs.readlinkSync
   }
 }

@@ -8,7 +8,7 @@ class IsDirectory extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.isDirectory()
     }

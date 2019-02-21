@@ -9,7 +9,7 @@ class FileWithChangedTimesByFD extends AsyncObject {
     super(fd, atime, mtime)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (fd, atime, mtime, callback) => {
       this.file = fd
       fs.futimes(fd, atime, mtime, callback)

@@ -9,7 +9,7 @@ class TruncatedFileByFD extends AsyncObject {
     super(fd, len || 0)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (fd, len, callback) => {
       this.file = fd
       fs.ftruncate(fd, len, callback)

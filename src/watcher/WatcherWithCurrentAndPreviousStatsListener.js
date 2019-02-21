@@ -6,14 +6,14 @@ const fs = require('fs')
 // Represented result is FSWatcher
 class WatcherWithCurrentAndPreviousStatsListener extends AsyncObject {
   /*
-    listener is an Event with definedBody(current, previous),
+    listener is an Event with body(current, previous),
     current and previous have Stats type
   */
   constructor (filename, options, listener) {
     super(filename, options, listener)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (filename, options, listener) => {
       return fs.watchFile(filename, options, listener)
     }

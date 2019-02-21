@@ -9,7 +9,7 @@ class CopiedDirectoryRecursively extends AsyncObject {
     super(dir, dest, options || 'utf8')
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return copiedDirectoryRecursively
   }
 }

@@ -9,7 +9,7 @@ class TruncatedFileByPath extends AsyncObject {
     super(path, len || 0)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, len, callback) => {
       this.file = path
       fs.truncate(path, len, callback)
