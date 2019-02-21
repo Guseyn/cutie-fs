@@ -6,13 +6,13 @@ const fs = require('fs')
 // Represented result is FSWatcher
 class WatcherWithEventTypeAndFilenameListener extends AsyncObject {
   /*
-    listener is an Event with definedBody(eventType, filename)
+    listener is an Event with body(eventType, filename)
   */
   constructor (filename, options, listener) {
     super(filename, options, listener)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (filename, options, listener) => {
       return fs.watch(filename, options, listener)
     }

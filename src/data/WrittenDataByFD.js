@@ -10,7 +10,7 @@ class WrittenDataByFD extends AsyncObject {
     super(fd, string, ...params)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.write
   }
 

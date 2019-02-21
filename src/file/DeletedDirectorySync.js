@@ -9,7 +9,7 @@ class DeletedDirectorySync extends AsyncObject {
     super(path)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (path) => {
       fs.rmdirSync(path)
       return path

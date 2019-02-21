@@ -16,7 +16,7 @@ class CreatedReadStream extends AsyncObject {
     })
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (path, options) => {
       return fs.createReadStream(path, options)
     }

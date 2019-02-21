@@ -9,7 +9,7 @@ class FileWithChangedTimesByPath extends AsyncObject {
     super(path, atime, mtime)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, atime, mtime, callback) => {
       this.file = path
       fs.utimes(path, atime, mtime, callback)

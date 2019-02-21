@@ -9,7 +9,7 @@ class WrittenDataByFDSync extends AsyncObject {
     super(fd, string, ...params)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (fd, string, ...params) => {
       return string
     }

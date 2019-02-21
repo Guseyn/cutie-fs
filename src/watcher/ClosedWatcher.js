@@ -8,7 +8,7 @@ class ClosedWatcher extends AsyncObject {
     super(watcher)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (watcher) => {
       watcher.close()
       return watcher

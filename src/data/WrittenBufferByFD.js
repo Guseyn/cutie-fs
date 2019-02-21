@@ -10,7 +10,7 @@ class WrittenBufferByFD extends AsyncObject {
     super(fd, buffer, ...params)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.write
   }
 

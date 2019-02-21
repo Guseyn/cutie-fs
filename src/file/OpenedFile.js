@@ -9,7 +9,7 @@ class OpenedFile extends AsyncObject {
     super(path, flags, mode || 0o666)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.open
   }
 }

@@ -22,7 +22,7 @@ class WatchListener extends Event {
     super()
   }
 
-  definedBody (eventType, fileName) {}
+  body (eventType, fileName) {}
 }
 
 class ErrorEvent extends Event {
@@ -30,7 +30,7 @@ class ErrorEvent extends Event {
     super()
   }
 
-  definedBody (/* error */) {}
+  body (/* error */) {}
 }
 
 new StrictEqualAssertion(

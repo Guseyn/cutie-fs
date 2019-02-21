@@ -9,7 +9,7 @@ class CreatedTemporaryDirectory extends AsyncObject {
     super(prefix, options || 'utf8')
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.mkdtemp
   }
 }

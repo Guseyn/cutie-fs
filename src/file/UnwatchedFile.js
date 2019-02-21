@@ -9,7 +9,7 @@ class UnwatchedFile extends AsyncObject {
     super(fileName, listener)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (fileName, listener) => {
       this.file = fileName
       fs.unwatchFile(fileName, listener)

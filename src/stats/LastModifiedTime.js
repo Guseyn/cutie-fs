@@ -8,7 +8,7 @@ class LastModifiedTime extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.mtime
     }

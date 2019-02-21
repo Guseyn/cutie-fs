@@ -9,7 +9,7 @@ class ReadLinkByPath extends AsyncObject {
     super(path, options || 'utf8')
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.readlink
   }
 }

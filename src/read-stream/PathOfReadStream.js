@@ -8,7 +8,7 @@ class PathOfReadStream extends AsyncObject {
     super(readStream)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (readStream) => {
       return readStream.path
     }

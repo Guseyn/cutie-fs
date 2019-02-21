@@ -9,7 +9,7 @@ class ClosedFile extends AsyncObject {
     super(fd)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (fd, callback) => {
       this.file = fd
       fs.close(fd, callback)

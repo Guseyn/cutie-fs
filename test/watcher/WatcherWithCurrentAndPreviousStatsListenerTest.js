@@ -21,7 +21,7 @@ class WatchListener extends Event {
     super()
   }
 
-  definedBody (current, previous) {}
+  body (current, previous) {}
 }
 
 new StrictEqualAssertion(

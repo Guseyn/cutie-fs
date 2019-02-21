@@ -13,7 +13,7 @@ class WrittenFile extends AsyncObject {
     })
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (file, data, options, callback) => {
       this.file = file
       fs.writeFile(file, data, options, callback)

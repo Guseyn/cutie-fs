@@ -8,7 +8,7 @@ class BytesReadFromReadStream extends AsyncObject {
     super(readStream)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (readStream) => {
       return readStream.bytesRead
     }

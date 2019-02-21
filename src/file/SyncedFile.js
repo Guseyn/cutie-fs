@@ -9,7 +9,7 @@ class SyncedFile extends AsyncObject {
     super(fd)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (fd, callback) => {
       this.file = fd
       fs.fsync(fd, callback)

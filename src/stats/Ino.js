@@ -8,7 +8,7 @@ class Ino extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.ino
     }

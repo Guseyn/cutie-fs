@@ -9,7 +9,7 @@ class FileWithChangedOwnerByPathSync extends AsyncObject {
     super(path, uid, gid)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (path, uid, gid) => {
       fs.chownSync(path, uid, gid)
       return path

@@ -21,7 +21,7 @@ class OpenEvent extends Event {
     super()
   }
 
-  definedBody (fd) {}
+  body (fd) {}
 }
 
 new StrictEqualAssertion(

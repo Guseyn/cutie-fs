@@ -9,7 +9,7 @@ class DeletedDirectory extends AsyncObject {
     super(path)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, callback) => {
       this.file = path
       fs.rmdir(path, callback)

@@ -8,7 +8,7 @@ class BytesWrittenToWriteStream extends AsyncObject {
     super(writeStream)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (writeStream) => {
       return writeStream.bytesWritten
     }

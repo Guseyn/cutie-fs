@@ -58,7 +58,7 @@ class StatsAssertions extends AsyncObject {
     super(...assertions)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (...assertions) => {
       return true
     }

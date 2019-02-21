@@ -9,7 +9,7 @@ class CopiedFileSync extends AsyncObject {
     super(src, dest, flags || 0)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (src, dest, flags) => {
       fs.copyFileSync(src, dest, flags)
       return dest

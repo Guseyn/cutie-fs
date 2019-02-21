@@ -13,7 +13,7 @@ class AppendedFile extends AsyncObject {
     })
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (file, data, options, callback) => {
       this.file = file
       fs.appendFile(file, data, options, callback)

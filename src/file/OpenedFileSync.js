@@ -9,7 +9,7 @@ class OpenedFileSync extends AsyncObject {
     super(path, flags, mode || 0o666)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return fs.openSync
   }
 }

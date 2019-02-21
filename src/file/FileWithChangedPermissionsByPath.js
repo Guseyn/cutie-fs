@@ -9,7 +9,7 @@ class FileWithChangedPermissionsByPath extends AsyncObject {
     super(path, mode)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, mode, callback) => {
       this.file = path
       fs.chmod(path, mode, callback)

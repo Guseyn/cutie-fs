@@ -9,7 +9,7 @@ class LinkedFileWithChangedOwnerByPath extends AsyncObject {
     super(path, uid, gid)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, uid, gid, callback) => {
       this.file = path
       fs.lchown(path, uid, gid, callback)

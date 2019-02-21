@@ -9,7 +9,7 @@ class LinkedStats extends AsyncObject {
     super(path)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return fs.lstat
   }
 }

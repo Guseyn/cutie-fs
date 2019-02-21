@@ -9,7 +9,7 @@ class AccessibleFileSync extends AsyncObject {
     super(path, mode || fs.constants.F_OK)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (path, mode) => {
       fs.accessSync(path, mode)
       return path

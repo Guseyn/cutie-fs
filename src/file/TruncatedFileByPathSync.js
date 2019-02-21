@@ -9,7 +9,7 @@ class TruncatedFileByPathSync extends AsyncObject {
     super(path, len || 0)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (path, len) => {
       fs.truncateSync(path, len)
       return path

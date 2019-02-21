@@ -9,7 +9,7 @@ class LinkedFileWithChangedPermissionsByPath extends AsyncObject {
     super(path, mode)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, mode, callback) => {
       this.file = path
       fs.lchmod(path, mode, callback)

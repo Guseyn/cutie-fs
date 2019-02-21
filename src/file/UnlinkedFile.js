@@ -9,7 +9,7 @@ class UnlinkedFile extends AsyncObject {
     super(path)
   }
 
-  definedAsyncCall () {
+  asyncCall () {
     return (path, callback) => {
       this.file = path
       fs.unlink(path, callback)

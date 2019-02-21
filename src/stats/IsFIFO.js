@@ -8,7 +8,7 @@ class IsFIFO extends AsyncObject {
     super(stats)
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (stats) => {
       return stats.isFIFO()
     }

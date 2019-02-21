@@ -9,7 +9,7 @@ class SymbolicLinkedFileSync extends AsyncObject {
     super(target, path, type || 'file')
   }
 
-  definedSyncCall () {
+  syncCall () {
     return (target, path, type) => {
       fs.symlinkSync(target, path, type)
       return path

@@ -8,7 +8,7 @@ class RealPathSync extends AsyncObject {
     super(path, options || 'utf8')
   }
 
-  definedSyncCall () {
+  syncCall () {
     return fs.realpathSync
   }
 }
