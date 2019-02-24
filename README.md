@@ -46,6 +46,7 @@ For more information about parameters in the async objects visit [docs of Node](
 | `WrittenBufferByFD` | `fs.write` | `fd, buffer[, offset[, length[, position]]]` | `buffer` |
 | `WrittenDataByFD` | `fs.write` | `fd, string[, position[, encoding]]` | `string` |
 | `WrittenDataByFD` | `fs.writeSync` | `fd, string[, position[, encoding]]`| `string` |
+| `WrittenDataToFiles` | [writtenDataToFiles](https://github.com/Guseyn/cutie-fs/blob/master/src/custom-calls/writtenDataToFiles.js) | `filesWithData({fileName1: data1, fileName2: data2, ... }), options({encoding: null, flag: 'r'})` | `filesWithData` |
 
 ## file
 

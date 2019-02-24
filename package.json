@@ -25,6 +25,7 @@
     "@cuties/error": "^1.1.0",
     "@cuties/event": "^1.1.0",
     "@cuties/is": "^1.1.0",
+    "@cuties/object": "^1.1.1",
     "@cuties/stream": "^1.2.0",
     "@cuties/wall": "^1.1.0",
     "test-executor": "^1.2.0"
