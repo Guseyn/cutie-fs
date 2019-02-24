@@ -10,6 +10,7 @@ module.exports = {
   WrittenBufferByFD: require('./src/data/WrittenBufferByFD'),
   WrittenDataByFD: require('./src/data/WrittenDataByFD'),
   WrittenDataByFDSync: require('./src/data/WrittenDataByFDSync'),
+  WrittenDataToFiles: require('./src/data/WrittenDataToFiles'),
 
   AccessibleFile: require('./src/file/AccessibleFile'),
   AccessibleFileSync: require('./src/file/AccessibleFileSync'),

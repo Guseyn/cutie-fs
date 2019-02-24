@@ -8,7 +8,7 @@ const {
   ReadDataByPath
 } = require('./../../index')
 
-const file = './test/data/files/test-46.txt'
+const file = './test/file/files/test-46.txt'
 const data = 'test buffer'
 
 new StrictEqualAssertion(
